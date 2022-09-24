@@ -92,5 +92,14 @@
     <Folder Include="domain\" />
     <Folder Include="infrastructure\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\starbucks_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\starbucks_logo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_logo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
