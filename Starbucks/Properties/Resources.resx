@@ -124,7 +124,7 @@
   <data name="home_img" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\home_img.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="menu_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\menu_logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="starbucks_logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\starbucks_logo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

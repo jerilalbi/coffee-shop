@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(screen_home));
+            this.components = new System.ComponentModel.Container();
             this.home_dynamicIsland = new Guna.UI2.WinForms.Guna2Panel();
             this.homeImg_bg = new Guna.UI2.WinForms.Guna2CircleButton();
             this.starbucks_moto = new System.Windows.Forms.Label();
@@ -38,6 +38,8 @@
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.starbucks_logo = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.home_parentForm = new Guna.UI2.WinForms.Guna2Panel();
+            this.home_dynamicIsland_timer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.starbucks_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -48,12 +50,13 @@
             this.home_dynamicIsland.BackColor = System.Drawing.SystemColors.Control;
             this.home_dynamicIsland.BorderColor = System.Drawing.Color.Transparent;
             this.home_dynamicIsland.BorderRadius = 13;
+            this.home_dynamicIsland.Cursor = System.Windows.Forms.Cursors.Hand;
             this.home_dynamicIsland.CustomBorderColor = System.Drawing.Color.Transparent;
-            this.home_dynamicIsland.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(112)))), ((int)(((byte)(74)))));
-            this.home_dynamicIsland.Location = new System.Drawing.Point(578, 42);
+            this.home_dynamicIsland.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
+            this.home_dynamicIsland.Location = new System.Drawing.Point(630, 30);
             this.home_dynamicIsland.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.home_dynamicIsland.Name = "home_dynamicIsland";
-            this.home_dynamicIsland.Size = new System.Drawing.Size(179, 36);
+            this.home_dynamicIsland.Size = new System.Drawing.Size(200, 50);
             this.home_dynamicIsland.TabIndex = 2;
             this.home_dynamicIsland.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
@@ -73,7 +76,7 @@
             this.homeImg_bg.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(113)))), ((int)(((byte)(67)))));
             this.homeImg_bg.IndicateFocus = true;
             this.homeImg_bg.Location = new System.Drawing.Point(837, 169);
-            this.homeImg_bg.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.homeImg_bg.Margin = new System.Windows.Forms.Padding(4);
             this.homeImg_bg.Name = "homeImg_bg";
             this.homeImg_bg.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.homeImg_bg.Size = new System.Drawing.Size(1163, 1126);
@@ -86,7 +89,7 @@
             this.starbucks_moto.AutoSize = true;
             this.starbucks_moto.Font = new System.Drawing.Font("Bahnschrift", 55.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.starbucks_moto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.starbucks_moto.Location = new System.Drawing.Point(43, 197);
+            this.starbucks_moto.Location = new System.Drawing.Point(44, 185);
             this.starbucks_moto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.starbucks_moto.Name = "starbucks_moto";
             this.starbucks_moto.Size = new System.Drawing.Size(786, 110);
@@ -98,7 +101,7 @@
             this.startbucks_moto2.AutoSize = true;
             this.startbucks_moto2.Font = new System.Drawing.Font("Bahnschrift", 55.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.startbucks_moto2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.startbucks_moto2.Location = new System.Drawing.Point(44, 297);
+            this.startbucks_moto2.Location = new System.Drawing.Point(44, 281);
             this.startbucks_moto2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.startbucks_moto2.Name = "startbucks_moto2";
             this.startbucks_moto2.Size = new System.Drawing.Size(189, 110);
@@ -111,7 +114,7 @@
             this.starbucks_title.BackColor = System.Drawing.Color.Transparent;
             this.starbucks_title.Font = new System.Drawing.Font("Bahnschrift", 55.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.starbucks_title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(113)))), ((int)(((byte)(67)))));
-            this.starbucks_title.Location = new System.Drawing.Point(194, 297);
+            this.starbucks_title.Location = new System.Drawing.Point(189, 281);
             this.starbucks_title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.starbucks_title.Name = "starbucks_title";
             this.starbucks_title.Size = new System.Drawing.Size(465, 110);
@@ -123,7 +126,7 @@
             this.starbucks_desc.AutoSize = true;
             this.starbucks_desc.Font = new System.Drawing.Font("Bahnschrift", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.starbucks_desc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.starbucks_desc.Location = new System.Drawing.Point(59, 407);
+            this.starbucks_desc.Location = new System.Drawing.Point(59, 393);
             this.starbucks_desc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.starbucks_desc.Name = "starbucks_desc";
             this.starbucks_desc.Size = new System.Drawing.Size(620, 66);
@@ -143,20 +146,21 @@
             this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(113)))), ((int)(((byte)(67)))));
             this.guna2Button1.Font = new System.Drawing.Font("Bahnschrift", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(62, 494);
+            this.guna2Button1.Location = new System.Drawing.Point(63, 474);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(113)))), ((int)(((byte)(67)))));
             this.guna2Button1.Size = new System.Drawing.Size(192, 64);
             this.guna2Button1.TabIndex = 15;
             this.guna2Button1.Text = "ORDER NOW";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // starbucks_logo
             // 
             this.starbucks_logo.BackColor = System.Drawing.Color.Transparent;
             this.starbucks_logo.FillColor = System.Drawing.Color.Transparent;
-            this.starbucks_logo.Image = ((System.Drawing.Image)(resources.GetObject("starbucks_logo.Image")));
+            this.starbucks_logo.Image = global::Starbucks.Properties.Resources.starbucks_logo1;
             this.starbucks_logo.ImageRotate = 0F;
-            this.starbucks_logo.Location = new System.Drawing.Point(62, 13);
+            this.starbucks_logo.Location = new System.Drawing.Point(63, 2);
             this.starbucks_logo.Margin = new System.Windows.Forms.Padding(4);
             this.starbucks_logo.Name = "starbucks_logo";
             this.starbucks_logo.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -182,12 +186,28 @@
             this.guna2PictureBox1.UseTransparentBackground = true;
             this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
             // 
+            // home_parentForm
+            // 
+            this.home_parentForm.BackColor = System.Drawing.Color.Transparent;
+            this.home_parentForm.Location = new System.Drawing.Point(3, 2);
+            this.home_parentForm.Name = "home_parentForm";
+            this.home_parentForm.Size = new System.Drawing.Size(53, 78);
+            this.home_parentForm.TabIndex = 16;
+            this.home_parentForm.UseTransparentBackground = true;
+            // 
+            // home_dynamicIsland_timer
+            // 
+            this.home_dynamicIsland_timer.Interval = 10;
+            this.home_dynamicIsland_timer.Tick += new System.EventHandler(this.home_dynamicIsland_timer_Tick);
+            // 
             // screen_home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1421, 734);
+            this.Controls.Add(this.home_dynamicIsland);
             this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.home_parentForm);
             this.Controls.Add(this.starbucks_desc);
             this.Controls.Add(this.starbucks_moto);
             this.Controls.Add(this.starbucks_title);
@@ -195,7 +215,6 @@
             this.Controls.Add(this.starbucks_logo);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.homeImg_bg);
-            this.Controls.Add(this.home_dynamicIsland);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "screen_home";
@@ -210,15 +229,17 @@
         }
 
         #endregion
-        private Guna.UI2.WinForms.Guna2Panel home_dynamicIsland;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2CircleButton homeImg_bg;
         private Guna.UI2.WinForms.Guna2CirclePictureBox starbucks_logo;
-        private System.Windows.Forms.Label starbucks_moto;
         private System.Windows.Forms.Label startbucks_moto2;
         private System.Windows.Forms.Label starbucks_title;
         private System.Windows.Forms.Label starbucks_desc;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Panel home_parentForm;
+        private System.Windows.Forms.Timer home_dynamicIsland_timer;
+        public Guna.UI2.WinForms.Guna2Panel home_dynamicIsland;
+        public System.Windows.Forms.Label starbucks_moto;
     }
 }
 

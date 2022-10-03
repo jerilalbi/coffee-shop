@@ -73,9 +73,9 @@ namespace Starbucks.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap menu_logo {
+        internal static System.Drawing.Bitmap starbucks_logo {
             get {
-                object obj = ResourceManager.GetObject("menu_logo", resourceCulture);
+                object obj = ResourceManager.GetObject("starbucks_logo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace Starbucks.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap starbucks_logo {
+        internal static System.Drawing.Bitmap starbucks_logo1 {
             get {
-                object obj = ResourceManager.GetObject("starbucks_logo", resourceCulture);
+                object obj = ResourceManager.GetObject("starbucks_logo1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
