@@ -63,6 +63,36 @@ namespace Starbucks.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cold_cofee_logo {
+            get {
+                object obj = ResourceManager.GetObject("cold_cofee_logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cold_drink_logo {
+            get {
+                object obj = ResourceManager.GetObject("cold_drink_logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap frappuccino {
+            get {
+                object obj = ResourceManager.GetObject("frappuccino", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap home_img {
             get {
                 object obj = ResourceManager.GetObject("home_img", resourceCulture);
@@ -73,9 +103,19 @@ namespace Starbucks.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap starbucks_logo {
+        internal static System.Drawing.Bitmap hot_coffee {
             get {
-                object obj = ResourceManager.GetObject("starbucks_logo", resourceCulture);
+                object obj = ResourceManager.GetObject("hot_coffee", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap snacks_logo {
+            get {
+                object obj = ResourceManager.GetObject("snacks_logo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

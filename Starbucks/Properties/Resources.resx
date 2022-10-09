@@ -118,13 +118,25 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="starbucks_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="frappuccino" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\frappuccino.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cold_drink_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cold_drink_logo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cold_cofee_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cold_cofee_logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="starbucks_logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\starbucks_logo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="home_img" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\home_img.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="starbucks_logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\starbucks_logo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="hot_coffee" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hot_coffee.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="snacks_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\snacks_logo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

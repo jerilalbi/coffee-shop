@@ -29,36 +29,45 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.home_dynamicIsland = new Guna.UI2.WinForms.Guna2Panel();
             this.homeImg_bg = new Guna.UI2.WinForms.Guna2CircleButton();
             this.starbucks_moto = new System.Windows.Forms.Label();
             this.startbucks_moto2 = new System.Windows.Forms.Label();
             this.starbucks_title = new System.Windows.Forms.Label();
             this.starbucks_desc = new System.Windows.Forms.Label();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.home_dynamicIsland_timer_expand = new System.Windows.Forms.Timer(this.components);
+            this.home_dynamicIsland = new Guna.UI2.WinForms.Guna2Panel();
+            this.h_coffee_category_tile = new Guna.UI2.WinForms.Guna2Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.bakery_category_tile = new Guna.UI2.WinForms.Guna2Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.c_drink_category_tile = new Guna.UI2.WinForms.Guna2Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.frapuccino_category_tile = new Guna.UI2.WinForms.Guna2Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.c_coffee_category_tile = new Guna.UI2.WinForms.Guna2Panel();
+            this.c_coffee_label = new System.Windows.Forms.Label();
             this.starbucks_logo = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.home_parentForm = new Guna.UI2.WinForms.Guna2Panel();
-            this.home_dynamicIsland_timer = new System.Windows.Forms.Timer(this.components);
+            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.home_dynamicIsland.SuspendLayout();
+            this.h_coffee_category_tile.SuspendLayout();
+            this.bakery_category_tile.SuspendLayout();
+            this.c_drink_category_tile.SuspendLayout();
+            this.frapuccino_category_tile.SuspendLayout();
+            this.c_coffee_category_tile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.starbucks_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // home_dynamicIsland
-            // 
-            this.home_dynamicIsland.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.home_dynamicIsland.BackColor = System.Drawing.SystemColors.Control;
-            this.home_dynamicIsland.BorderColor = System.Drawing.Color.Transparent;
-            this.home_dynamicIsland.BorderRadius = 13;
-            this.home_dynamicIsland.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.home_dynamicIsland.CustomBorderColor = System.Drawing.Color.Transparent;
-            this.home_dynamicIsland.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
-            this.home_dynamicIsland.Location = new System.Drawing.Point(630, 30);
-            this.home_dynamicIsland.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.home_dynamicIsland.Name = "home_dynamicIsland";
-            this.home_dynamicIsland.Size = new System.Drawing.Size(200, 50);
-            this.home_dynamicIsland.TabIndex = 2;
-            this.home_dynamicIsland.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
             // homeImg_bg
             // 
@@ -154,6 +163,153 @@
             this.guna2Button1.Text = "ORDER NOW";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
+            // home_dynamicIsland_timer_expand
+            // 
+            this.home_dynamicIsland_timer_expand.Interval = 10;
+            this.home_dynamicIsland_timer_expand.Tick += new System.EventHandler(this.home_dynamicIsland_timer_Tick);
+            // 
+            // home_dynamicIsland
+            // 
+            this.home_dynamicIsland.BackColor = System.Drawing.Color.Transparent;
+            this.home_dynamicIsland.BorderRadius = 13;
+            this.home_dynamicIsland.Controls.Add(this.h_coffee_category_tile);
+            this.home_dynamicIsland.Controls.Add(this.bakery_category_tile);
+            this.home_dynamicIsland.Controls.Add(this.c_drink_category_tile);
+            this.home_dynamicIsland.Controls.Add(this.frapuccino_category_tile);
+            this.home_dynamicIsland.Controls.Add(this.c_coffee_category_tile);
+            this.home_dynamicIsland.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.home_dynamicIsland.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
+            this.home_dynamicIsland.Location = new System.Drawing.Point(433, 12);
+            this.home_dynamicIsland.Name = "home_dynamicIsland";
+            this.home_dynamicIsland.Size = new System.Drawing.Size(602, 100);
+            this.home_dynamicIsland.TabIndex = 17;
+            this.home_dynamicIsland.Paint += new System.Windows.Forms.PaintEventHandler(this.home_dynamicIsland_Paint);
+            // 
+            // h_coffee_category_tile
+            // 
+            this.h_coffee_category_tile.AutoSize = true;
+            this.h_coffee_category_tile.BorderRadius = 10;
+            this.h_coffee_category_tile.Controls.Add(this.guna2PictureBox4);
+            this.h_coffee_category_tile.Controls.Add(this.label2);
+            this.h_coffee_category_tile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.h_coffee_category_tile.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(113)))), ((int)(((byte)(67)))));
+            this.h_coffee_category_tile.Location = new System.Drawing.Point(201, 3);
+            this.h_coffee_category_tile.Name = "h_coffee_category_tile";
+            this.h_coffee_category_tile.Size = new System.Drawing.Size(96, 97);
+            this.h_coffee_category_tile.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(96, 97);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "HOT COFFEE";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // bakery_category_tile
+            // 
+            this.bakery_category_tile.BorderRadius = 10;
+            this.bakery_category_tile.Controls.Add(this.guna2PictureBox6);
+            this.bakery_category_tile.Controls.Add(this.label4);
+            this.bakery_category_tile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bakery_category_tile.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(113)))), ((int)(((byte)(67)))));
+            this.bakery_category_tile.Location = new System.Drawing.Point(402, 0);
+            this.bakery_category_tile.Name = "bakery_category_tile";
+            this.bakery_category_tile.Size = new System.Drawing.Size(93, 97);
+            this.bakery_category_tile.TabIndex = 3;
+            // 
+            // label4
+            // 
+            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.Control;
+            this.label4.Location = new System.Drawing.Point(0, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(93, 97);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "BAKERY";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // c_drink_category_tile
+            // 
+            this.c_drink_category_tile.BorderRadius = 10;
+            this.c_drink_category_tile.Controls.Add(this.guna2PictureBox5);
+            this.c_drink_category_tile.Controls.Add(this.label3);
+            this.c_drink_category_tile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.c_drink_category_tile.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(113)))), ((int)(((byte)(67)))));
+            this.c_drink_category_tile.Location = new System.Drawing.Point(300, 3);
+            this.c_drink_category_tile.Name = "c_drink_category_tile";
+            this.c_drink_category_tile.Size = new System.Drawing.Size(93, 97);
+            this.c_drink_category_tile.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Control;
+            this.label3.Location = new System.Drawing.Point(0, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(93, 97);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "COLD DRINK";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // frapuccino_category_tile
+            // 
+            this.frapuccino_category_tile.AutoSize = true;
+            this.frapuccino_category_tile.BorderRadius = 10;
+            this.frapuccino_category_tile.Controls.Add(this.guna2PictureBox3);
+            this.frapuccino_category_tile.Controls.Add(this.label1);
+            this.frapuccino_category_tile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.frapuccino_category_tile.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(113)))), ((int)(((byte)(67)))));
+            this.frapuccino_category_tile.Location = new System.Drawing.Point(102, 3);
+            this.frapuccino_category_tile.Name = "frapuccino_category_tile";
+            this.frapuccino_category_tile.Size = new System.Drawing.Size(96, 97);
+            this.frapuccino_category_tile.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(96, 97);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "FRAPPUCCINO";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // c_coffee_category_tile
+            // 
+            this.c_coffee_category_tile.AutoSize = true;
+            this.c_coffee_category_tile.BorderRadius = 10;
+            this.c_coffee_category_tile.Controls.Add(this.guna2PictureBox2);
+            this.c_coffee_category_tile.Controls.Add(this.c_coffee_label);
+            this.c_coffee_category_tile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.c_coffee_category_tile.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(113)))), ((int)(((byte)(67)))));
+            this.c_coffee_category_tile.Location = new System.Drawing.Point(3, 3);
+            this.c_coffee_category_tile.Name = "c_coffee_category_tile";
+            this.c_coffee_category_tile.Size = new System.Drawing.Size(96, 97);
+            this.c_coffee_category_tile.TabIndex = 2;
+            this.c_coffee_category_tile.Paint += new System.Windows.Forms.PaintEventHandler(this.category_tile_Paint);
+            // 
+            // c_coffee_label
+            // 
+            this.c_coffee_label.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.c_coffee_label.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.c_coffee_label.ForeColor = System.Drawing.SystemColors.Control;
+            this.c_coffee_label.Location = new System.Drawing.Point(0, 0);
+            this.c_coffee_label.Name = "c_coffee_label";
+            this.c_coffee_label.Size = new System.Drawing.Size(96, 97);
+            this.c_coffee_label.TabIndex = 1;
+            this.c_coffee_label.Text = "COLD COFFEE";
+            this.c_coffee_label.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.c_coffee_label.Click += new System.EventHandler(this.label1_Click);
+            // 
             // starbucks_logo
             // 
             this.starbucks_logo.BackColor = System.Drawing.Color.Transparent;
@@ -176,44 +332,94 @@
             this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.Image = global::Starbucks.Properties.Resources.home_img;
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(559, 102);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(934, 129);
             this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(1129, 561);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(374, 524);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 8;
             this.guna2PictureBox1.TabStop = false;
             this.guna2PictureBox1.UseTransparentBackground = true;
             this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
             // 
-            // home_parentForm
+            // guna2PictureBox4
             // 
-            this.home_parentForm.BackColor = System.Drawing.Color.Transparent;
-            this.home_parentForm.Location = new System.Drawing.Point(3, 2);
-            this.home_parentForm.Name = "home_parentForm";
-            this.home_parentForm.Size = new System.Drawing.Size(53, 78);
-            this.home_parentForm.TabIndex = 16;
-            this.home_parentForm.UseTransparentBackground = true;
+            this.guna2PictureBox4.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox4.Image = global::Starbucks.Properties.Resources.hot_coffee;
+            this.guna2PictureBox4.ImageRotate = 0F;
+            this.guna2PictureBox4.Location = new System.Drawing.Point(3, 3);
+            this.guna2PictureBox4.Name = "guna2PictureBox4";
+            this.guna2PictureBox4.Size = new System.Drawing.Size(90, 72);
+            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox4.TabIndex = 0;
+            this.guna2PictureBox4.TabStop = false;
+            this.guna2PictureBox4.UseTransparentBackground = true;
             // 
-            // home_dynamicIsland_timer
+            // guna2PictureBox6
             // 
-            this.home_dynamicIsland_timer.Interval = 10;
-            this.home_dynamicIsland_timer.Tick += new System.EventHandler(this.home_dynamicIsland_timer_Tick);
+            this.guna2PictureBox6.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox6.Image = global::Starbucks.Properties.Resources.snacks_logo;
+            this.guna2PictureBox6.ImageRotate = 0F;
+            this.guna2PictureBox6.Location = new System.Drawing.Point(3, 6);
+            this.guna2PictureBox6.Name = "guna2PictureBox6";
+            this.guna2PictureBox6.Size = new System.Drawing.Size(90, 72);
+            this.guna2PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox6.TabIndex = 0;
+            this.guna2PictureBox6.TabStop = false;
+            this.guna2PictureBox6.UseTransparentBackground = true;
+            // 
+            // guna2PictureBox5
+            // 
+            this.guna2PictureBox5.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox5.Image = global::Starbucks.Properties.Resources.cold_drink_logo;
+            this.guna2PictureBox5.ImageRotate = 0F;
+            this.guna2PictureBox5.Location = new System.Drawing.Point(9, 3);
+            this.guna2PictureBox5.Name = "guna2PictureBox5";
+            this.guna2PictureBox5.Size = new System.Drawing.Size(81, 72);
+            this.guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox5.TabIndex = 0;
+            this.guna2PictureBox5.TabStop = false;
+            this.guna2PictureBox5.UseTransparentBackground = true;
+            // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox3.Image = global::Starbucks.Properties.Resources.frappuccino;
+            this.guna2PictureBox3.ImageRotate = 0F;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(0, -3);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.Size = new System.Drawing.Size(93, 78);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox3.TabIndex = 0;
+            this.guna2PictureBox3.TabStop = false;
+            this.guna2PictureBox3.UseTransparentBackground = true;
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.Image = global::Starbucks.Properties.Resources.cold_cofee_logo;
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(3, 3);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(90, 72);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox2.TabIndex = 0;
+            this.guna2PictureBox2.TabStop = false;
+            this.guna2PictureBox2.UseTransparentBackground = true;
             // 
             // screen_home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1421, 734);
-            this.Controls.Add(this.home_dynamicIsland);
             this.Controls.Add(this.guna2Button1);
-            this.Controls.Add(this.home_parentForm);
             this.Controls.Add(this.starbucks_desc);
             this.Controls.Add(this.starbucks_moto);
             this.Controls.Add(this.starbucks_title);
             this.Controls.Add(this.startbucks_moto2);
             this.Controls.Add(this.starbucks_logo);
             this.Controls.Add(this.guna2PictureBox1);
+            this.Controls.Add(this.home_dynamicIsland);
             this.Controls.Add(this.homeImg_bg);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -221,8 +427,20 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.home_dynamicIsland.ResumeLayout(false);
+            this.home_dynamicIsland.PerformLayout();
+            this.h_coffee_category_tile.ResumeLayout(false);
+            this.bakery_category_tile.ResumeLayout(false);
+            this.c_drink_category_tile.ResumeLayout(false);
+            this.frapuccino_category_tile.ResumeLayout(false);
+            this.c_coffee_category_tile.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.starbucks_logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -236,10 +454,24 @@
         private System.Windows.Forms.Label starbucks_title;
         private System.Windows.Forms.Label starbucks_desc;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Panel home_parentForm;
-        private System.Windows.Forms.Timer home_dynamicIsland_timer;
-        public Guna.UI2.WinForms.Guna2Panel home_dynamicIsland;
+        private System.Windows.Forms.Timer home_dynamicIsland_timer_expand;
         public System.Windows.Forms.Label starbucks_moto;
+        public Guna.UI2.WinForms.Guna2Panel home_dynamicIsland;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        public Guna.UI2.WinForms.Guna2Panel c_coffee_category_tile;
+        public System.Windows.Forms.Label c_coffee_label;
+        public Guna.UI2.WinForms.Guna2Panel frapuccino_category_tile;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
+        public System.Windows.Forms.Label label1;
+        public Guna.UI2.WinForms.Guna2Panel bakery_category_tile;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox6;
+        public System.Windows.Forms.Label label4;
+        public Guna.UI2.WinForms.Guna2Panel c_drink_category_tile;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox5;
+        public System.Windows.Forms.Label label3;
+        public Guna.UI2.WinForms.Guna2Panel h_coffee_category_tile;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
+        public System.Windows.Forms.Label label2;
     }
 }
 

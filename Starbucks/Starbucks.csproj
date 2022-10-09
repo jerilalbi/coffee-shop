@@ -37,6 +37,7 @@
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.3.5\lib\net40\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -49,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="application\events\AlignCategoryTile.cs" />
     <Compile Include="application\events\Dynamic_island.cs" />
     <Compile Include="presentation\home\screen_home.cs">
       <SubType>Form</SubType>
@@ -97,6 +99,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\starbucks_logo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frapuccino_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cold_cofee_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frapuccino_logo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hot_cofee_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cold_drink_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\snacks_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frappuccino.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hot_coffee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cold_drink_logo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\snacks_logo1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
