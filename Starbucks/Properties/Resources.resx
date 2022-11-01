@@ -130,13 +130,16 @@
   <data name="starbucks_logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\starbucks_logo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="snacks_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\snacks_logo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="home_img" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\home_img.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="hot_coffee" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hot_coffee.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="snacks_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\snacks_logo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="login_side" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\login_side.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

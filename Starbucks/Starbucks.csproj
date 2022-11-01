@@ -58,10 +58,19 @@
     <Compile Include="presentation\home\screen_home.Designer.cs">
       <DependentUpon>screen_home.cs</DependentUpon>
     </Compile>
+    <Compile Include="presentation\login\Screen_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentation\login\Screen_Login.Designer.cs">
+      <DependentUpon>Screen_Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="presentation\home\screen_home.resx">
       <DependentUpon>screen_home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentation\login\Screen_Login.resx">
+      <DependentUpon>Screen_Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -129,6 +138,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\snacks_logo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_side.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
