@@ -32,10 +32,10 @@
             this.login_side_img = new Guna.UI2.WinForms.Guna2PictureBox();
             this.login_back_logo = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.user_toggle_btn = new Guna.UI2.WinForms.Guna2ToggleSwitch();
-            this.admin_box = new Guna.UI2.WinForms.Guna2Panel();
-            this.admin_label = new System.Windows.Forms.Label();
             this.customer_box = new Guna.UI2.WinForms.Guna2Panel();
             this.customer_label = new System.Windows.Forms.Label();
+            this.admin_box = new Guna.UI2.WinForms.Guna2Panel();
+            this.admin_label = new System.Windows.Forms.Label();
             this.login_customer_text1 = new System.Windows.Forms.Label();
             this.login_customer_text2 = new System.Windows.Forms.Label();
             this.continue_customer_btn = new Guna.UI2.WinForms.Guna2TileButton();
@@ -44,8 +44,8 @@
             this.admin_login_btn = new Guna.UI2.WinForms.Guna2TileButton();
             ((System.ComponentModel.ISupportInitialize)(this.login_side_img)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.login_back_logo)).BeginInit();
-            this.admin_box.SuspendLayout();
             this.customer_box.SuspendLayout();
+            this.admin_box.SuspendLayout();
             this.SuspendLayout();
             // 
             // login_side_img
@@ -72,15 +72,13 @@
             this.login_back_logo.TabIndex = 1;
             this.login_back_logo.TabStop = false;
             this.login_back_logo.UseTransparentBackground = true;
-            this.login_back_logo.Click += new System.EventHandler(this.login_back_logo_Click);
             // 
             // user_toggle_btn
             // 
             this.user_toggle_btn.Animated = true;
             this.user_toggle_btn.BackColor = System.Drawing.Color.Transparent;
-            this.user_toggle_btn.Checked = true;
-            this.user_toggle_btn.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(113)))), ((int)(((byte)(67)))));
-            this.user_toggle_btn.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(113)))), ((int)(((byte)(67)))));
+            this.user_toggle_btn.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.user_toggle_btn.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.user_toggle_btn.CheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.user_toggle_btn.CheckedState.InnerColor = System.Drawing.Color.White;
             this.user_toggle_btn.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -88,11 +86,39 @@
             this.user_toggle_btn.Name = "user_toggle_btn";
             this.user_toggle_btn.Size = new System.Drawing.Size(292, 36);
             this.user_toggle_btn.TabIndex = 2;
-            this.user_toggle_btn.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.user_toggle_btn.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.user_toggle_btn.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(113)))), ((int)(((byte)(67)))));
+            this.user_toggle_btn.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(113)))), ((int)(((byte)(67)))));
             this.user_toggle_btn.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.user_toggle_btn.UncheckedState.InnerColor = System.Drawing.Color.White;
             this.user_toggle_btn.CheckedChanged += new System.EventHandler(this.user_toggle_btn_CheckedChanged);
+            // 
+            // customer_box
+            // 
+            this.customer_box.AutoRoundedCorners = true;
+            this.customer_box.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
+            this.customer_box.BorderRadius = 17;
+            this.customer_box.BorderThickness = 3;
+            this.customer_box.Controls.Add(this.customer_label);
+            this.customer_box.CustomBorderColor = System.Drawing.Color.Transparent;
+            this.customer_box.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
+            this.customer_box.ForeColor = System.Drawing.Color.White;
+            this.customer_box.Location = new System.Drawing.Point(705, 67);
+            this.customer_box.Name = "customer_box";
+            this.customer_box.Size = new System.Drawing.Size(143, 36);
+            this.customer_box.TabIndex = 3;
+            // 
+            // customer_label
+            // 
+            this.customer_label.BackColor = System.Drawing.Color.Transparent;
+            this.customer_label.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.customer_label.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customer_label.ForeColor = System.Drawing.Color.White;
+            this.customer_label.Location = new System.Drawing.Point(0, 0);
+            this.customer_label.Name = "customer_label";
+            this.customer_label.Size = new System.Drawing.Size(143, 36);
+            this.customer_label.TabIndex = 0;
+            this.customer_label.Text = "CUSTOMER";
+            this.customer_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // admin_box
             // 
@@ -103,10 +129,10 @@
             this.admin_box.Controls.Add(this.admin_label);
             this.admin_box.CustomBorderColor = System.Drawing.Color.Transparent;
             this.admin_box.ForeColor = System.Drawing.Color.DarkGray;
-            this.admin_box.Location = new System.Drawing.Point(705, 67);
+            this.admin_box.Location = new System.Drawing.Point(1195, 67);
             this.admin_box.Name = "admin_box";
             this.admin_box.Size = new System.Drawing.Size(143, 36);
-            this.admin_box.TabIndex = 3;
+            this.admin_box.TabIndex = 4;
             // 
             // admin_label
             // 
@@ -117,36 +143,9 @@
             this.admin_label.Location = new System.Drawing.Point(0, 0);
             this.admin_label.Name = "admin_label";
             this.admin_label.Size = new System.Drawing.Size(143, 36);
-            this.admin_label.TabIndex = 0;
+            this.admin_label.TabIndex = 1;
             this.admin_label.Text = "ADMIN";
             this.admin_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // customer_box
-            // 
-            this.customer_box.AutoRoundedCorners = true;
-            this.customer_box.BorderColor = System.Drawing.Color.DarkGray;
-            this.customer_box.BorderRadius = 17;
-            this.customer_box.BorderThickness = 3;
-            this.customer_box.Controls.Add(this.customer_label);
-            this.customer_box.CustomBorderColor = System.Drawing.Color.Transparent;
-            this.customer_box.ForeColor = System.Drawing.Color.DarkGray;
-            this.customer_box.Location = new System.Drawing.Point(1195, 67);
-            this.customer_box.Name = "customer_box";
-            this.customer_box.Size = new System.Drawing.Size(143, 36);
-            this.customer_box.TabIndex = 4;
-            // 
-            // customer_label
-            // 
-            this.customer_label.BackColor = System.Drawing.Color.Transparent;
-            this.customer_label.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.customer_label.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customer_label.ForeColor = System.Drawing.Color.DarkGray;
-            this.customer_label.Location = new System.Drawing.Point(0, 0);
-            this.customer_label.Name = "customer_label";
-            this.customer_label.Size = new System.Drawing.Size(143, 36);
-            this.customer_label.TabIndex = 1;
-            this.customer_label.Text = "CUSTOMER";
-            this.customer_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // login_customer_text1
             // 
@@ -156,7 +155,7 @@
             this.login_customer_text1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.login_customer_text1.Location = new System.Drawing.Point(700, 268);
             this.login_customer_text1.Name = "login_customer_text1";
-            this.login_customer_text1.Size = new System.Drawing.Size(393, 102);
+            this.login_customer_text1.Size = new System.Drawing.Size(381, 100);
             this.login_customer_text1.TabIndex = 5;
             this.login_customer_text1.Text = "Today\'s good mood\r\nis sponsored by ";
             // 
@@ -277,20 +276,19 @@
             this.Controls.Add(this.continue_customer_btn);
             this.Controls.Add(this.login_customer_text1);
             this.Controls.Add(this.login_customer_text2);
-            this.Controls.Add(this.customer_box);
             this.Controls.Add(this.admin_box);
+            this.Controls.Add(this.customer_box);
             this.Controls.Add(this.user_toggle_btn);
             this.Controls.Add(this.login_back_logo);
             this.Controls.Add(this.login_side_img);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Screen_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Screen_Login";
-            this.Load += new System.EventHandler(this.Screen_Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.login_side_img)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.login_back_logo)).EndInit();
-            this.admin_box.ResumeLayout(false);
             this.customer_box.ResumeLayout(false);
+            this.admin_box.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -300,16 +298,16 @@
 
         private Guna.UI2.WinForms.Guna2PictureBox login_side_img;
         private Guna.UI2.WinForms.Guna2CirclePictureBox login_back_logo;
-        private Guna.UI2.WinForms.Guna2ToggleSwitch user_toggle_btn;
-        private Guna.UI2.WinForms.Guna2Panel admin_box;
-        private System.Windows.Forms.Label admin_label;
-        private Guna.UI2.WinForms.Guna2Panel customer_box;
-        private System.Windows.Forms.Label customer_label;
-        private System.Windows.Forms.Label login_customer_text1;
-        private System.Windows.Forms.Label login_customer_text2;
-        private Guna.UI2.WinForms.Guna2TileButton continue_customer_btn;
-        private Guna.UI2.WinForms.Guna2TextBox admin_user_txtBox;
-        private Guna.UI2.WinForms.Guna2TextBox admin_passwrd_txtBox;
-        private Guna.UI2.WinForms.Guna2TileButton admin_login_btn;
+        public System.Windows.Forms.Label admin_label;
+        public System.Windows.Forms.Label customer_label;
+        public Guna.UI2.WinForms.Guna2ToggleSwitch user_toggle_btn;
+        public System.Windows.Forms.Label login_customer_text1;
+        public System.Windows.Forms.Label login_customer_text2;
+        public Guna.UI2.WinForms.Guna2TileButton continue_customer_btn;
+        public Guna.UI2.WinForms.Guna2TextBox admin_user_txtBox;
+        public Guna.UI2.WinForms.Guna2TextBox admin_passwrd_txtBox;
+        public Guna.UI2.WinForms.Guna2TileButton admin_login_btn;
+        public Guna.UI2.WinForms.Guna2Panel customer_box;
+        public Guna.UI2.WinForms.Guna2Panel admin_box;
     }
 }

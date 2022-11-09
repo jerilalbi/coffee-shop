@@ -1,5 +1,6 @@
 ﻿using Guna.UI2.WinForms;
 using Starbucks.application.events;
+using Starbucks.presentation.login;
 using System;
 using System.Diagnostics;
 using System.Drawing;
@@ -21,7 +22,7 @@ namespace Starbucks
             sc_home_instance = this;
             home_dynamic_island = home_dynamicIsland;
             home_dynamic_island.Size = new Size(200, 50);
-            home_dynamic_island.Location = new Point((ClientSize.Width / 2) - (home_dynamic_island.Width / 2),5);
+            home_dynamic_island.Location = new Point((ClientSize.Width / 2) - (home_dynamic_island.Width / 2),6);
             foreach(Guna2Panel categoryTile in home_dynamicIsland.Controls)
             {
                 categoryTile.Visible = false;
@@ -32,25 +33,11 @@ namespace Starbucks
         void mouseClick()
         {
             home_dynamicIsland.MouseClick += new MouseEventHandler(dynamicIsland_click);
+            
         }
 
         // color = 0, 102, 0  name = home_dynamicIsland  size = 200, 50
         
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2PictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2CircleButton1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
@@ -81,19 +68,11 @@ namespace Starbucks
             home_dynamicIsland_timer_expand.Enabled = false;
         }
 
-        private void home_dynamicIsland_Paint(object sender, PaintEventArgs e)
+
+        private void guna2PictureBox7_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void category_tile_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            Screen_Login.screen_Login.Show();
+            Dispose();
         }
     }
 }

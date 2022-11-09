@@ -8,6 +8,7 @@ namespace Starbucks.application.events
     public class Dynamic_island
     {
         AlignCategoryTile alignCategory = new AlignCategoryTile();
+        int topPadding = 6;
 
         public  void expandDynamicIsland()
         {
@@ -16,13 +17,13 @@ namespace Starbucks.application.events
                 if (screen_home.sc_home_instance.home_dynamic_island.Width < 600)
                 {
                     screen_home.sc_home_instance.home_dynamic_island.Width += 8;
-                    screen_home.sc_home_instance.home_dynamic_island.Location = new Point((screen_home.sc_home_instance.ClientSize.Width / 2) - (screen_home.sc_home_instance.home_dynamic_island.Width / 2), 5);
+                    screen_home.sc_home_instance.home_dynamic_island.Location = new Point((screen_home.sc_home_instance.ClientSize.Width / 2) - (screen_home.sc_home_instance.home_dynamic_island.Width / 2), topPadding);
                     screen_home.sc_home_instance.home_dynamic_island.Refresh();
                 }
                 if (screen_home.sc_home_instance.home_dynamic_island.Height < 100)
                 {
                     screen_home.sc_home_instance.home_dynamic_island.Height++;
-                    screen_home.sc_home_instance.home_dynamic_island.Location = new Point((screen_home.sc_home_instance.ClientSize.Width / 2) - (screen_home.sc_home_instance.home_dynamic_island.Width / 2), 5);
+                    screen_home.sc_home_instance.home_dynamic_island.Location = new Point((screen_home.sc_home_instance.ClientSize.Width / 2) - (screen_home.sc_home_instance.home_dynamic_island.Width / 2), topPadding);
                     screen_home.sc_home_instance.home_dynamic_island.Refresh();
                 }
             }
@@ -46,14 +47,14 @@ namespace Starbucks.application.events
                     screen_home.sc_home_instance.home_dynamicIsland.Width -= 8;
                     screen_home.sc_home_instance.home_dynamic_island.Invalidate();
                     screen_home.sc_home_instance.home_dynamic_island.Refresh();
-                    screen_home.sc_home_instance.home_dynamic_island.Location = new Point((screen_home.sc_home_instance.ClientSize.Width / 2) - (screen_home.sc_home_instance.home_dynamic_island.Width / 2), 5);
+                    screen_home.sc_home_instance.home_dynamic_island.Location = new Point((screen_home.sc_home_instance.ClientSize.Width / 2) - (screen_home.sc_home_instance.home_dynamic_island.Width / 2), topPadding);
                 }
                 if (screen_home.sc_home_instance.home_dynamicIsland.Height > 50)
                 {
                     screen_home.sc_home_instance.home_dynamicIsland.Height--;
                     screen_home.sc_home_instance.home_dynamic_island.Invalidate();
                     screen_home.sc_home_instance.home_dynamic_island.Refresh();
-                    screen_home.sc_home_instance.home_dynamic_island.Location = new Point((screen_home.sc_home_instance.ClientSize.Width / 2) - (screen_home.sc_home_instance.home_dynamic_island.Width / 2), 5);
+                    screen_home.sc_home_instance.home_dynamic_island.Location = new Point((screen_home.sc_home_instance.ClientSize.Width / 2) - (screen_home.sc_home_instance.home_dynamic_island.Width / 2), topPadding);
                 }
             }
         }
