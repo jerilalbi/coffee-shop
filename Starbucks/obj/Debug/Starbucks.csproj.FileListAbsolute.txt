@@ -12,3 +12,8 @@ J:\coding\.net\Starbucks\Starbucks\bin\Debug\Guna.UI2.dll
 J:\coding\.net\Starbucks\Starbucks\obj\Debug\Starbucks.csproj.CopyComplete
 J:\coding\.net\Starbucks\Starbucks\obj\Debug\Starbucks.screen_home.resources
 J:\coding\.net\Starbucks\Starbucks\obj\Debug\Starbucks.presentation.login.Screen_Login.resources
+J:\coding\.net\Starbucks\Starbucks\obj\Debug\Starbucks.presentation.product.Screen_Product.resources
+J:\coding\.net\Starbucks\Starbucks\obj\Debug\Starbucks.infrastructure.components.ProductCard.resources
+J:\coding\.net\Starbucks\Starbucks\bin\Debug\Guna.Charts.WinForms.dll
+J:\coding\.net\Starbucks\Starbucks\obj\Debug\Starbucks.presentation.basket.Screen_MyBasket.resources
+J:\coding\.net\Starbucks\Starbucks\obj\Debug\Starbucks.infrastructure.components.Product_Tile.resources

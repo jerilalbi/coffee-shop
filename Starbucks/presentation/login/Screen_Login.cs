@@ -1,7 +1,5 @@
-﻿using Guna.UI2.WinForms;
-using Starbucks.application.events;
+﻿using Starbucks.application.events;
 using System;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace Starbucks.presentation.login

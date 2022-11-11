@@ -1,4 +1,5 @@
 ﻿using Guna.UI2.WinForms;
+using Starbucks.presentation.product;
 using System;
 using System.Drawing;
 
@@ -10,53 +11,58 @@ namespace Starbucks.application.events
         AlignCategoryTile alignCategory = new AlignCategoryTile();
         int topPadding = 6;
 
-        public  void expandDynamicIsland()
+        public  void expandDynamicIsland(Guna2Panel panel,bool isProductPage)
         {
-            while (screen_home.sc_home_instance.home_dynamic_island.Width < 600 || screen_home.sc_home_instance.home_dynamic_island.Height < 100)
+            panel.AutoRoundedCorners = false;
+            while (panel.Width < 600 || panel.Height < 100)
             {
-                if (screen_home.sc_home_instance.home_dynamic_island.Width < 600)
+                if (panel.Width < 600)
                 {
-                    screen_home.sc_home_instance.home_dynamic_island.Width += 8;
-                    screen_home.sc_home_instance.home_dynamic_island.Location = new Point((screen_home.sc_home_instance.ClientSize.Width / 2) - (screen_home.sc_home_instance.home_dynamic_island.Width / 2), topPadding);
-                    screen_home.sc_home_instance.home_dynamic_island.Refresh();
+                    panel.Width += 8;
+                    panel.Location = isProductPage ? new Point((Screen_Product.screen_product.ClientSize.Width / 2) - (panel.Width / 2), topPadding) : new Point((screen_home.sc_home_instance.ClientSize.Width / 2) - (panel.Width / 2), topPadding);
+                    panel.Refresh();
                 }
-                if (screen_home.sc_home_instance.home_dynamic_island.Height < 100)
+                if (panel.Height < 100)
                 {
-                    screen_home.sc_home_instance.home_dynamic_island.Height++;
-                    screen_home.sc_home_instance.home_dynamic_island.Location = new Point((screen_home.sc_home_instance.ClientSize.Width / 2) - (screen_home.sc_home_instance.home_dynamic_island.Width / 2), topPadding);
-                    screen_home.sc_home_instance.home_dynamic_island.Refresh();
+                    panel.Height++;
+                    panel.Location = isProductPage ? new Point((Screen_Product.screen_product.ClientSize.Width / 2) - (panel.Width / 2), topPadding) : new Point((screen_home.sc_home_instance.ClientSize.Width / 2) - (panel.Width / 2), topPadding);
+                    panel.Refresh();
                 }
+                panel.BorderRadius = 13;
             }
-            foreach(Guna2Panel categoryTile in screen_home.sc_home_instance.home_dynamic_island.Controls)
+            foreach(Guna2Panel categoryTile in panel.Controls)
             {
                 categoryTile.Visible = true;
             }
-            alignCategory.alignCategoryTile();
+            alignCategory.alignCategoryTile(isProductPage);
         }
 
-        public void srinkDynamicIsland()
+        public void srinkDynamicIsland(Guna2Panel panel, bool isProductPage )
         {
-            foreach (Guna2Panel categoryTile in screen_home.sc_home_instance.home_dynamic_island.Controls)
+            panel.AutoRoundedCorners = true;
+            foreach (Guna2Panel categoryTile in panel.Controls)
             {
                 categoryTile.Visible = false;
             }
-            while (screen_home.sc_home_instance.home_dynamicIsland.Width > 200 || screen_home.sc_home_instance.home_dynamicIsland.Height > 50)
+            while (panel.Width > 200 || panel.Height > 50)
             {
-                if (screen_home.sc_home_instance.home_dynamicIsland.Width > 200)
+                if (panel.Width > 200)
                 {
-                    screen_home.sc_home_instance.home_dynamicIsland.Width -= 8;
-                    screen_home.sc_home_instance.home_dynamic_island.Invalidate();
-                    screen_home.sc_home_instance.home_dynamic_island.Refresh();
-                    screen_home.sc_home_instance.home_dynamic_island.Location = new Point((screen_home.sc_home_instance.ClientSize.Width / 2) - (screen_home.sc_home_instance.home_dynamic_island.Width / 2), topPadding);
+                    panel.Width -= 8;
+                    panel.Invalidate();
+                    panel.Refresh();
+                    panel.Location = isProductPage ? new Point((Screen_Product.screen_product.ClientSize.Width / 2) - (panel.Width / 2), topPadding) : new Point((screen_home.sc_home_instance.ClientSize.Width / 2) - (panel.Width / 2), topPadding);
                 }
-                if (screen_home.sc_home_instance.home_dynamicIsland.Height > 50)
+                if (panel.Height > 50)
                 {
-                    screen_home.sc_home_instance.home_dynamicIsland.Height--;
-                    screen_home.sc_home_instance.home_dynamic_island.Invalidate();
-                    screen_home.sc_home_instance.home_dynamic_island.Refresh();
-                    screen_home.sc_home_instance.home_dynamic_island.Location = new Point((screen_home.sc_home_instance.ClientSize.Width / 2) - (screen_home.sc_home_instance.home_dynamic_island.Width / 2), topPadding);
+                    panel.Height--;
+                    panel.Invalidate();
+                    panel.Refresh();
+                    panel.Location = isProductPage ? new Point((Screen_Product.screen_product.ClientSize.Width / 2) - (panel.Width / 2), topPadding) : new Point((screen_home.sc_home_instance.ClientSize.Width / 2) - (panel.Width / 2), topPadding);
                 }
+                
             }
+            panel.Location = isProductPage ? new Point(406, topPadding) : new Point((screen_home.sc_home_instance.ClientSize.Width / 2) - (panel.Width / 2), topPadding);
         }
     }
 }

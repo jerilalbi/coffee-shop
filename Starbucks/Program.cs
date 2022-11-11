@@ -1,8 +1,7 @@
-﻿using Starbucks.presentation.login;
+﻿using Starbucks.presentation.basket;
+using Starbucks.presentation.login;
+using Starbucks.presentation.product;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Starbucks
@@ -17,7 +16,7 @@ namespace Starbucks
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Screen_Login());
+            Application.Run(new Screen_MyBasket());
         }
     }
 }

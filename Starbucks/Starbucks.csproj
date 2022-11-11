@@ -33,12 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Guna.Charts.WinForms, Version=1.0.4.0, Culture=neutral, PublicKeyToken=70866663edbc6595, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.Charts.WinForms.1.0.4\lib\net40\Guna.Charts.WinForms.dll</HintPath>
+    </Reference>
     <Reference Include="Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.3.5\lib\net40\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,9 +55,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="application\datas\data.cs" />
     <Compile Include="application\events\AdminLogin.cs" />
     <Compile Include="application\events\AlignCategoryTile.cs" />
     <Compile Include="application\events\Dynamic_island.cs" />
+    <Compile Include="infrastructure\components\ProductCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="infrastructure\components\ProductCard.Designer.cs">
+      <DependentUpon>ProductCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="infrastructure\components\Product_Tile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="infrastructure\components\Product_Tile.Designer.cs">
+      <DependentUpon>Product_Tile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="presentation\basket\Screen_MyBasket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentation\basket\Screen_MyBasket.Designer.cs">
+      <DependentUpon>Screen_MyBasket.cs</DependentUpon>
+    </Compile>
     <Compile Include="presentation\home\screen_home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,13 +89,31 @@
     <Compile Include="presentation\login\Screen_Login.Designer.cs">
       <DependentUpon>Screen_Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="presentation\product\Screen_Product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentation\product\Screen_Product.Designer.cs">
+      <DependentUpon>Screen_Product.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="infrastructure\components\ProductCard.resx">
+      <DependentUpon>ProductCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="infrastructure\components\Product_Tile.resx">
+      <DependentUpon>Product_Tile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentation\basket\Screen_MyBasket.resx">
+      <DependentUpon>Screen_MyBasket.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="presentation\home\screen_home.resx">
       <DependentUpon>screen_home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="presentation\login\Screen_Login.resx">
       <DependentUpon>Screen_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentation\product\Screen_Product.resx">
+      <DependentUpon>Screen_Product.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -102,16 +144,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="domain\" />
-    <Folder Include="infrastructure\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\starbucks_logo.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\starbucks_logo1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\frapuccino_logo.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cold_cofee_logo.png" />
@@ -148,6 +186,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\back_logo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cart_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prod_bg_pattern.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prod_bg_pattern_op.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prod_frap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\starbucks_logo_op.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

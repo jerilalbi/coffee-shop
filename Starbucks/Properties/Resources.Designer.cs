@@ -73,6 +73,16 @@ namespace Starbucks.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cart_logo {
+            get {
+                object obj = ResourceManager.GetObject("cart_logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cold_cofee_logo {
             get {
                 object obj = ResourceManager.GetObject("cold_cofee_logo", resourceCulture);
@@ -86,6 +96,16 @@ namespace Starbucks.Properties {
         internal static System.Drawing.Bitmap cold_drink_logo {
             get {
                 object obj = ResourceManager.GetObject("cold_drink_logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap delete_64 {
+            get {
+                object obj = ResourceManager.GetObject("delete-64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +153,39 @@ namespace Starbucks.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap prod_bg_pattern_op {
+            get {
+                object obj = ResourceManager.GetObject("prod_bg_pattern_op", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap prod_frap {
+            get {
+                object obj = ResourceManager.GetObject("prod_frap", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap snacks_logo {
             get {
                 object obj = ResourceManager.GetObject("snacks_logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap starbucks_logo_op {
+            get {
+                object obj = ResourceManager.GetObject("starbucks_logo_op", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
