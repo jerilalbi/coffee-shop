@@ -30,7 +30,6 @@ namespace Starbucks
                 categoryTile.Visible = false;
             }
             mouseClick();
-            data.categoryNo = 15;
         }
 
         void mouseClick()

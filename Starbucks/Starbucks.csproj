@@ -77,6 +77,12 @@
     <Compile Include="presentation\basket\Screen_MyBasket.Designer.cs">
       <DependentUpon>Screen_MyBasket.cs</DependentUpon>
     </Compile>
+    <Compile Include="presentation\email\Screen_email.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentation\email\Screen_email.Designer.cs">
+      <DependentUpon>Screen_email.cs</DependentUpon>
+    </Compile>
     <Compile Include="presentation\home\screen_home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,12 @@
     <Compile Include="presentation\product\Screen_Product.Designer.cs">
       <DependentUpon>Screen_Product.cs</DependentUpon>
     </Compile>
+    <Compile Include="presentation\summary\Screen_orderSum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentation\summary\Screen_orderSum.Designer.cs">
+      <DependentUpon>Screen_orderSum.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="infrastructure\components\ProductCard.resx">
@@ -106,6 +118,9 @@
     <EmbeddedResource Include="presentation\basket\Screen_MyBasket.resx">
       <DependentUpon>Screen_MyBasket.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="presentation\email\Screen_email.resx">
+      <DependentUpon>Screen_email.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="presentation\home\screen_home.resx">
       <DependentUpon>screen_home.cs</DependentUpon>
     </EmbeddedResource>
@@ -114,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="presentation\product\Screen_Product.resx">
       <DependentUpon>Screen_Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentation\summary\Screen_orderSum.resx">
+      <DependentUpon>Screen_orderSum.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -204,6 +222,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\starbucks_logo_op.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dine_in.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\take-away.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

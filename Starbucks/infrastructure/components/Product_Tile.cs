@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Starbucks.application.datas;
+using Starbucks.presentation.basket;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.Design;
@@ -23,7 +25,7 @@ namespace Starbucks.infrastructure.components
         #region properties
         private Image _image;
         private String _title;
-        public int _price;
+        private int _price;
 
         public Image Image
         {
@@ -47,7 +49,19 @@ namespace Starbucks.infrastructure.components
         #endregion
 
         private void label2_Click(object sender, EventArgs e)
+
         {
+            decreaseAmount();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            increaseAmount();
+        }
+
+        void decreaseAmount()
+        {
+            data data = new data();
             if (prod_count <= 1)
             {
                 prod_amount.Text = "1";
@@ -58,14 +72,30 @@ namespace Starbucks.infrastructure.components
                 prod_count--;
                 prod_amount.Text = prod_count.ToString();
                 price_label.Text = $"Price: {_price * prod_count}";
+                data.totalPrice -= _price;
+                Screen_MyBasket.sc_basket.total_price.Text = $"Total: {data.totalPrice}";
+                Screen_MyBasket.sc_basket.total_price.Refresh();
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        void increaseAmount()
         {
             prod_count++;
             prod_amount.Text = prod_count.ToString();
             price_label.Text = $"Price: {_price * prod_count}";
+            data.totalPrice += _price;
+            Screen_MyBasket.sc_basket.total_price.Text = $"Total: {data.totalPrice}";
+            Screen_MyBasket.sc_basket.total_price.Refresh();
+        }
+
+        private void guna2Panel4_Click(object sender, EventArgs e)
+        {
+            increaseAmount();
+        }
+
+        private void guna2Panel3_Click(object sender, EventArgs e)
+        {
+            decreaseAmount();
         }
     }
 }

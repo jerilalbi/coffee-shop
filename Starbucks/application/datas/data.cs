@@ -8,6 +8,7 @@ namespace Starbucks.application.datas
 {
     public class data
     {
-        public static int categoryNo;
+        public static int totalPrice;
+        public static String emailId;
     }
 }

@@ -1,4 +1,5 @@
-﻿using Starbucks.infrastructure.components;
+﻿using Starbucks.application.datas;
+using Starbucks.infrastructure.components;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,9 +15,11 @@ namespace Starbucks.presentation.basket
     public partial class Screen_MyBasket : Form
     {
         int row = 1;
+        public static Screen_MyBasket sc_basket;
         public Screen_MyBasket()
         {
             InitializeComponent();
+            sc_basket = this;
             my_basket_label.Location = new Point((ClientSize.Width / 2) - (my_basket_label.Width / 2), 10);
             loadItems();
         }
@@ -44,12 +47,14 @@ namespace Starbucks.presentation.basket
                         {
                             Title = "Pumbikn\nFrappuccino",
                             Image = Starbucks.Properties.Resources.prod_frap,
-                            Price = 785
-                        }); ;
+                            Price = 785,
+                        });
+                    data.totalPrice += 785;
+                    total_price.Text = $"Total: {data.totalPrice.ToString()}";
+                    total_price.Refresh();
                 }
             }
            
         }
-
     }
 }

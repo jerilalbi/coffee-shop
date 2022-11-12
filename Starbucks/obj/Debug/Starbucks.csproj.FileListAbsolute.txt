@@ -17,3 +17,5 @@ J:\coding\.net\Starbucks\Starbucks\obj\Debug\Starbucks.infrastructure.components
 J:\coding\.net\Starbucks\Starbucks\bin\Debug\Guna.Charts.WinForms.dll
 J:\coding\.net\Starbucks\Starbucks\obj\Debug\Starbucks.presentation.basket.Screen_MyBasket.resources
 J:\coding\.net\Starbucks\Starbucks\obj\Debug\Starbucks.infrastructure.components.Product_Tile.resources
+J:\coding\.net\Starbucks\Starbucks\obj\Debug\Starbucks.presentation.email.Screen_email.resources
+J:\coding\.net\Starbucks\Starbucks\obj\Debug\Starbucks.presentation.summary.Screen_orderSum.resources

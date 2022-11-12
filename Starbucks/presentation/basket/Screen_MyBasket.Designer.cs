@@ -140,8 +140,8 @@
         private Guna.UI2.WinForms.Guna2PictureBox back_button;
         private System.Windows.Forms.Label my_basket_label;
         private Guna.UI2.WinForms.Guna2PictureBox cart_btn;
-        private System.Windows.Forms.Label total_price;
         private Guna.UI2.WinForms.Guna2TileButton next_btn;
         private System.Windows.Forms.FlowLayoutPanel cart_items_panel;
+        public System.Windows.Forms.Label total_price;
     }
 }

@@ -325,6 +325,7 @@
             this.cart_btn.TabIndex = 21;
             this.cart_btn.TabStop = false;
             this.cart_btn.UseTransparentBackground = true;
+            this.cart_btn.Click += new System.EventHandler(this.cart_btn_Click);
             // 
             // category_img
             // 
@@ -388,6 +389,7 @@
             this.next_btn.Size = new System.Drawing.Size(137, 36);
             this.next_btn.TabIndex = 0;
             this.next_btn.Text = "NEXT";
+            this.next_btn.Click += new System.EventHandler(this.next_btn_Click);
             // 
             // product_display_panel
             // 

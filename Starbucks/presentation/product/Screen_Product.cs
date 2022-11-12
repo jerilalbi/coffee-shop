@@ -1,6 +1,7 @@
 ﻿using Guna.UI2.WinForms;
 using Starbucks.application.events;
 using Starbucks.infrastructure.components;
+using Starbucks.presentation.basket;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -178,6 +179,20 @@ namespace Starbucks.presentation.product
         private void label4_Click(object sender, EventArgs e)
         {
             category_change(5);
+        }
+
+        private void cart_btn_Click(object sender, EventArgs e)
+        {
+            Screen_MyBasket myBasket = new Screen_MyBasket();
+            myBasket.Show();
+            Hide();
+        }
+
+        private void next_btn_Click(object sender, EventArgs e)
+        {
+            Screen_MyBasket myBasket = new Screen_MyBasket();
+            myBasket.Show();
+            Hide();
         }
     }
 }

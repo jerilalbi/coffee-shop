@@ -113,6 +113,7 @@
             this.guna2Panel4.Name = "guna2Panel4";
             this.guna2Panel4.Size = new System.Drawing.Size(40, 40);
             this.guna2Panel4.TabIndex = 4;
+            this.guna2Panel4.Click += new System.EventHandler(this.guna2Panel4_Click);
             // 
             // label1
             // 
@@ -139,6 +140,7 @@
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(40, 40);
             this.guna2Panel3.TabIndex = 3;
+            this.guna2Panel3.Click += new System.EventHandler(this.guna2Panel3_Click);
             // 
             // label2
             // 
