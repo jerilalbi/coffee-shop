@@ -28,44 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.starbucks_logo = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.email_textBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.next_btn = new Guna.UI2.WinForms.Guna2TileButton();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            this.starbucks_logo = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.starbucks_logo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // guna2CirclePictureBox1
-            // 
-            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox1.Image = global::Starbucks.Properties.Resources.starbucks_logo_op;
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(888, 33);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(1000, 1000);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox1.TabIndex = 0;
-            this.guna2CirclePictureBox1.TabStop = false;
-            this.guna2CirclePictureBox1.UseTransparentBackground = true;
-            // 
-            // starbucks_logo
-            // 
-            this.starbucks_logo.BackColor = System.Drawing.Color.Transparent;
-            this.starbucks_logo.FillColor = System.Drawing.Color.Transparent;
-            this.starbucks_logo.Image = global::Starbucks.Properties.Resources.starbucks_logo1;
-            this.starbucks_logo.ImageRotate = 0F;
-            this.starbucks_logo.Location = new System.Drawing.Point(63, 1);
-            this.starbucks_logo.Margin = new System.Windows.Forms.Padding(4);
-            this.starbucks_logo.Name = "starbucks_logo";
-            this.starbucks_logo.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.starbucks_logo.Size = new System.Drawing.Size(98, 98);
-            this.starbucks_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.starbucks_logo.TabIndex = 12;
-            this.starbucks_logo.TabStop = false;
-            this.starbucks_logo.UseTransparentBackground = true;
             // 
             // label1
             // 
@@ -123,11 +93,41 @@
             this.next_btn.Text = "NEXT";
             this.next_btn.Click += new System.EventHandler(this.next_btn_Click);
             // 
+            // starbucks_logo
+            // 
+            this.starbucks_logo.BackColor = System.Drawing.Color.Transparent;
+            this.starbucks_logo.FillColor = System.Drawing.Color.Transparent;
+            this.starbucks_logo.Image = global::Starbucks.Properties.Resources.starbucks_logo1;
+            this.starbucks_logo.ImageRotate = 0F;
+            this.starbucks_logo.Location = new System.Drawing.Point(63, 1);
+            this.starbucks_logo.Margin = new System.Windows.Forms.Padding(4);
+            this.starbucks_logo.Name = "starbucks_logo";
+            this.starbucks_logo.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.starbucks_logo.Size = new System.Drawing.Size(98, 98);
+            this.starbucks_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.starbucks_logo.TabIndex = 12;
+            this.starbucks_logo.TabStop = false;
+            this.starbucks_logo.UseTransparentBackground = true;
+            // 
+            // guna2CirclePictureBox1
+            // 
+            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CirclePictureBox1.Image = global::Starbucks.Properties.Resources.starbucks_logo_op;
+            this.guna2CirclePictureBox1.ImageRotate = 0F;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(902, 31);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(1000, 1000);
+            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2CirclePictureBox1.TabIndex = 0;
+            this.guna2CirclePictureBox1.TabStop = false;
+            this.guna2CirclePictureBox1.UseTransparentBackground = true;
+            // 
             // Screen_email
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1385, 640);
+            this.ClientSize = new System.Drawing.Size(1403, 687);
             this.Controls.Add(this.next_btn);
             this.Controls.Add(this.email_textBox);
             this.Controls.Add(this.starbucks_logo);
@@ -137,8 +137,8 @@
             this.Name = "Screen_email";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Screen_email";
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.starbucks_logo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

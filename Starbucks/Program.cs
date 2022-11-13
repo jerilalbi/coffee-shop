@@ -1,8 +1,6 @@
-﻿using Starbucks.presentation.basket;
-using Starbucks.presentation.email;
+﻿using Starbucks.presentation.admin.dashboard;
 using Starbucks.presentation.login;
 using Starbucks.presentation.product;
-using Starbucks.presentation.summary;
 using System;
 using System.Windows.Forms;
 
@@ -18,7 +16,7 @@ namespace Starbucks
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Screen_orderSum());
+            Application.Run(new Screen_Dashboard());
         }
     }
 }

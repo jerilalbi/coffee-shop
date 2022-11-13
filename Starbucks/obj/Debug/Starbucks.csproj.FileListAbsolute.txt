@@ -19,3 +19,8 @@ J:\coding\.net\Starbucks\Starbucks\obj\Debug\Starbucks.presentation.basket.Scree
 J:\coding\.net\Starbucks\Starbucks\obj\Debug\Starbucks.infrastructure.components.Product_Tile.resources
 J:\coding\.net\Starbucks\Starbucks\obj\Debug\Starbucks.presentation.email.Screen_email.resources
 J:\coding\.net\Starbucks\Starbucks\obj\Debug\Starbucks.presentation.summary.Screen_orderSum.resources
+J:\coding\.net\Starbucks\Starbucks\obj\Debug\Starbucks.presentation.final.Screen_final.resources
+J:\coding\.net\Starbucks\Starbucks\obj\Debug\Starbucks.presentation.admin.dashboard.Screen_Dashboard.resources
+J:\coding\.net\Starbucks\Starbucks\obj\Debug\Starbucks.presentation.admin.dash_overview.Dash_Overview.resources
+J:\coding\.net\Starbucks\Starbucks\obj\Debug\Starbucks.presentation.admin.dash_add_exp.Dash_addExp.resources
+J:\coding\.net\Starbucks\Starbucks\obj\Debug\Starbucks.presentation.admin.dash_add_prod.Dash_addProd.resources

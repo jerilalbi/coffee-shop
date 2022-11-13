@@ -124,9 +124,7 @@ namespace Starbucks.presentation.product
                 product_display_panel.Controls.Add(
                     new ProductCard
                 {
-                    Price = $"30{i}",
-                    SizeList = "small",
-                    FlavourList = "apple"
+                    Price = 250,
                 }) ;
             }
         }

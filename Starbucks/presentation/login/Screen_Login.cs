@@ -1,5 +1,9 @@
-﻿using Starbucks.application.events;
+﻿using Guna.UI2.WinForms;
+using Starbucks.application.events;
+using Starbucks.domain.admin;
 using System;
+using System.Drawing;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace Starbucks.presentation.login
@@ -7,7 +11,7 @@ namespace Starbucks.presentation.login
     public partial class Screen_Login : Form
     {
         public static Screen_Login screen_Login;
-        AdminLogin adminLogin = new AdminLogin();
+        
         public Screen_Login()
         {
             InitializeComponent();
@@ -16,6 +20,7 @@ namespace Starbucks.presentation.login
 
         void userCheck()
         {
+            AdminLogin adminLogin = new AdminLogin();
             if (user_toggle_btn.Checked)
             {
                 adminLogin.isAdmin = true;
@@ -43,6 +48,58 @@ namespace Starbucks.presentation.login
             GC.Collect();
             GC.WaitForPendingFinalizers();
             this.Hide();
+        }
+
+        private void admin_login_btn_Click(object sender, EventArgs e)
+        {
+            if(validate(admin_user_txtBox, false) && validate(admin_passwrd_txtBox, true))
+            {
+                Login login = new Login();
+               bool result = login.adminLogin(admin_user_txtBox.Text,admin_passwrd_txtBox.Text);
+                if (result)
+                {
+                    GC.Collect();
+                    GC.WaitForPendingFinalizers();
+                    Hide();
+                }
+            }
+            
+            
+        }
+
+        bool validate(Guna2TextBox textbox,bool ispassword)
+        {
+            if (ispassword)
+            {
+                if(textbox.Text.Trim() == "")
+                {
+                    textbox.BorderColor = Color.Red;
+                    textbox.PlaceholderForeColor = Color.Red;
+                    textbox.PlaceholderText = "Enter a password";
+                    return false;
+                }
+                else
+                {
+                    textbox.BorderColor = Color.FromArgb(0, 192, 192);
+                    return true;
+                }
+            }
+            else
+            {
+
+                if (textbox.Text.Trim() == "")
+                {
+                    textbox.BorderColor = Color.Red;
+                    textbox.PlaceholderForeColor = Color.Red;
+                    textbox.PlaceholderText = "Enter an Username";
+                    return false;
+                }
+                else {
+                    textbox.BorderColor = Color.FromArgb(0, 192, 192);
+                    return true;
+                }
+            }
+           
         }
     }
 }

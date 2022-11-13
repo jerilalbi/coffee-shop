@@ -117,6 +117,7 @@
             this.flavour_combo_bx.Size = new System.Drawing.Size(126, 36);
             this.flavour_combo_bx.TabIndex = 9;
             this.flavour_combo_bx.Tag = "";
+            this.flavour_combo_bx.SelectedIndexChanged += new System.EventHandler(this.flavour_combo_bx_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -147,13 +148,16 @@
             this.size_combo_bx.FormattingEnabled = true;
             this.size_combo_bx.ItemHeight = 30;
             this.size_combo_bx.Items.AddRange(new object[] {
-            "granny"});
+            "small",
+            "medium",
+            "large"});
             this.size_combo_bx.ItemsAppearance.ForeColor = System.Drawing.Color.White;
             this.size_combo_bx.Location = new System.Drawing.Point(87, 222);
             this.size_combo_bx.Name = "size_combo_bx";
             this.size_combo_bx.Size = new System.Drawing.Size(156, 36);
             this.size_combo_bx.TabIndex = 6;
             this.size_combo_bx.Tag = "";
+            this.size_combo_bx.SelectedIndexChanged += new System.EventHandler(this.size_combo_bx_SelectedIndexChanged);
             // 
             // size_label
             // 

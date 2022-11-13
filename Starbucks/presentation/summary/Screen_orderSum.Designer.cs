@@ -146,7 +146,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Baskerville Old Face", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(62, 261);
+            this.label3.Location = new System.Drawing.Point(1072, 270);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(211, 32);
             this.label3.TabIndex = 16;
@@ -156,7 +156,7 @@
             // 
             this.total_amount.AutoSize = true;
             this.total_amount.Font = new System.Drawing.Font("Book Antiqua", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.total_amount.Location = new System.Drawing.Point(63, 304);
+            this.total_amount.Location = new System.Drawing.Point(1077, 324);
             this.total_amount.Name = "total_amount";
             this.total_amount.Size = new System.Drawing.Size(206, 28);
             this.total_amount.TabIndex = 17;
@@ -166,7 +166,7 @@
             // 
             this.gst_label.AutoSize = true;
             this.gst_label.Font = new System.Drawing.Font("Book Antiqua", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gst_label.Location = new System.Drawing.Point(63, 346);
+            this.gst_label.Location = new System.Drawing.Point(1077, 371);
             this.gst_label.Name = "gst_label";
             this.gst_label.Size = new System.Drawing.Size(151, 28);
             this.gst_label.TabIndex = 19;
@@ -176,7 +176,7 @@
             // 
             this.packing_charge.AutoSize = true;
             this.packing_charge.Font = new System.Drawing.Font("Book Antiqua", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.packing_charge.Location = new System.Drawing.Point(63, 386);
+            this.packing_charge.Location = new System.Drawing.Point(1077, 423);
             this.packing_charge.Name = "packing_charge";
             this.packing_charge.Size = new System.Drawing.Size(210, 28);
             this.packing_charge.TabIndex = 20;
@@ -187,7 +187,7 @@
             // 
             this.final_amount.AutoSize = true;
             this.final_amount.Font = new System.Drawing.Font("Baskerville Old Face", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.final_amount.Location = new System.Drawing.Point(57, 460);
+            this.final_amount.Location = new System.Drawing.Point(1072, 513);
             this.final_amount.Name = "final_amount";
             this.final_amount.Size = new System.Drawing.Size(204, 32);
             this.final_amount.TabIndex = 21;
@@ -196,6 +196,7 @@
             // guna2TileButton1
             // 
             this.guna2TileButton1.BorderRadius = 15;
+            this.guna2TileButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2TileButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2TileButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2TileButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -203,7 +204,7 @@
             this.guna2TileButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
             this.guna2TileButton1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2TileButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2TileButton1.Location = new System.Drawing.Point(57, 507);
+            this.guna2TileButton1.Location = new System.Drawing.Point(1082, 565);
             this.guna2TileButton1.Name = "guna2TileButton1";
             this.guna2TileButton1.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
             this.guna2TileButton1.Size = new System.Drawing.Size(264, 59);
@@ -214,7 +215,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1367, 593);
+            this.ClientSize = new System.Drawing.Size(1403, 687);
             this.Controls.Add(this.guna2TileButton1);
             this.Controls.Add(this.final_amount);
             this.Controls.Add(this.packing_charge);

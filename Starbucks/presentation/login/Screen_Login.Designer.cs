@@ -264,6 +264,7 @@
             this.admin_login_btn.TabIndex = 10;
             this.admin_login_btn.Text = "LOGIN";
             this.admin_login_btn.Visible = false;
+            this.admin_login_btn.Click += new System.EventHandler(this.admin_login_btn_Click);
             // 
             // Screen_Login
             // 

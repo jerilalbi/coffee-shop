@@ -59,6 +59,8 @@
     <Compile Include="application\events\AdminLogin.cs" />
     <Compile Include="application\events\AlignCategoryTile.cs" />
     <Compile Include="application\events\Dynamic_island.cs" />
+    <Compile Include="domain\admin\Login.cs" />
+    <Compile Include="domain\Database.cs" />
     <Compile Include="infrastructure\components\ProductCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -71,6 +73,30 @@
     <Compile Include="infrastructure\components\Product_Tile.Designer.cs">
       <DependentUpon>Product_Tile.cs</DependentUpon>
     </Compile>
+    <Compile Include="presentation\admin\dashboard\Screen_Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentation\admin\dashboard\Screen_Dashboard.Designer.cs">
+      <DependentUpon>Screen_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="presentation\admin\dash_add_exp\Dash_addExp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="presentation\admin\dash_add_exp\Dash_addExp.Designer.cs">
+      <DependentUpon>Dash_addExp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="presentation\admin\dash_add_prod\Dash_addProd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="presentation\admin\dash_add_prod\Dash_addProd.Designer.cs">
+      <DependentUpon>Dash_addProd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="presentation\admin\dash_overview\Dash_Overview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="presentation\admin\dash_overview\Dash_Overview.Designer.cs">
+      <DependentUpon>Dash_Overview.cs</DependentUpon>
+    </Compile>
     <Compile Include="presentation\basket\Screen_MyBasket.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +108,12 @@
     </Compile>
     <Compile Include="presentation\email\Screen_email.Designer.cs">
       <DependentUpon>Screen_email.cs</DependentUpon>
+    </Compile>
+    <Compile Include="presentation\final\Screen_final.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentation\final\Screen_final.Designer.cs">
+      <DependentUpon>Screen_final.cs</DependentUpon>
     </Compile>
     <Compile Include="presentation\home\screen_home.cs">
       <SubType>Form</SubType>
@@ -115,11 +147,26 @@
     <EmbeddedResource Include="infrastructure\components\Product_Tile.resx">
       <DependentUpon>Product_Tile.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="presentation\admin\dashboard\Screen_Dashboard.resx">
+      <DependentUpon>Screen_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentation\admin\dash_add_exp\Dash_addExp.resx">
+      <DependentUpon>Dash_addExp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentation\admin\dash_add_prod\Dash_addProd.resx">
+      <DependentUpon>Dash_addProd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentation\admin\dash_overview\Dash_Overview.resx">
+      <DependentUpon>Dash_Overview.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="presentation\basket\Screen_MyBasket.resx">
       <DependentUpon>Screen_MyBasket.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="presentation\email\Screen_email.resx">
       <DependentUpon>Screen_email.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentation\final\Screen_final.resx">
+      <DependentUpon>Screen_final.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="presentation\home\screen_home.resx">
       <DependentUpon>screen_home.cs</DependentUpon>
@@ -161,7 +208,7 @@
     <None Include="Resources\home_img.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="domain\" />
+    <Folder Include="domain\user\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\starbucks_logo.png" />
