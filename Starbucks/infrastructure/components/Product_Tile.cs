@@ -17,20 +17,26 @@ namespace Starbucks.infrastructure.components
     public partial class Product_Tile : UserControl
     {
         int prod_count = 1;
+        ImageConverter imageConverter = new ImageConverter();
         public Product_Tile()
         {
             InitializeComponent();
         }
 
         #region properties
-        private Image _image;
+        private byte[] _image;
         private String _title;
         private int _price;
+        private string _size;
+        private string _flavour;
+        private int _count;
 
-        public Image Image
+        public byte[] Image
         {
             get { return _image; }
-            set { _image = value; cart_prod_img.Image = value; }
+            set { _image = value;
+                Image img = (Image)imageConverter.ConvertFrom(value);
+                cart_prod_img.Image = img; }
         }
 
         [Editor(typeof(MultilineStringEditor), typeof(UITypeEditor))]
@@ -44,6 +50,24 @@ namespace Starbucks.infrastructure.components
         {
             get { return _price; }
             set { _price = value; price_label.Text = $"Price: {value}"; }
+        }
+
+        public string ProdSize
+        {
+            get { return _size; }
+            set { _size = value; size_txt.Text = value; }
+        }
+
+        public string Flavour
+        {
+            get { return _flavour; }
+            set { _flavour = value; flavour_txt.Text = value; }
+        }
+
+        public int Count
+        {
+            get { return _count; }
+            set { _count = value; prod_count = value; }
         }
 
         #endregion
@@ -61,7 +85,6 @@ namespace Starbucks.infrastructure.components
 
         void decreaseAmount()
         {
-            data data = new data();
             if (prod_count <= 1)
             {
                 prod_amount.Text = "1";

@@ -39,6 +39,9 @@
     <Reference Include="Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.3.5\lib\net40\Guna.UI2.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -53,14 +56,24 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="Zen.Barcode.Core, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b5ae55aa76d2d9de, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zen.Barcode.Rendering.Framework.3.1.10729.1\lib\Zen.Barcode.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ZKWeb.System.Drawing, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZKWeb.System.Drawing.4.0.0\lib\net45\ZKWeb.System.Drawing.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="application\datas\data.cs" />
     <Compile Include="application\events\AdminLogin.cs" />
     <Compile Include="application\events\AlignCategoryTile.cs" />
     <Compile Include="application\events\Dynamic_island.cs" />
+    <Compile Include="application\events\Email.cs" />
+    <Compile Include="domain\admin\AddProduct.cs" />
     <Compile Include="domain\admin\Login.cs" />
     <Compile Include="domain\Database.cs" />
+    <Compile Include="domain\user\AddCart.cs" />
+    <Compile Include="domain\user\GetProduct.cs" />
     <Compile Include="infrastructure\components\ProductCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -127,6 +140,12 @@
     <Compile Include="presentation\login\Screen_Login.Designer.cs">
       <DependentUpon>Screen_Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="presentation\payment\Screen_Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentation\payment\Screen_Payment.Designer.cs">
+      <DependentUpon>Screen_Payment.cs</DependentUpon>
+    </Compile>
     <Compile Include="presentation\product\Screen_Product.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +193,9 @@
     <EmbeddedResource Include="presentation\login\Screen_Login.resx">
       <DependentUpon>Screen_Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="presentation\payment\Screen_Payment.resx">
+      <DependentUpon>Screen_Payment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="presentation\product\Screen_Product.resx">
       <DependentUpon>Screen_Product.cs</DependentUpon>
     </EmbeddedResource>
@@ -207,9 +229,7 @@
   <ItemGroup>
     <None Include="Resources\home_img.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="domain\user\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\starbucks_logo.png" />
   </ItemGroup>

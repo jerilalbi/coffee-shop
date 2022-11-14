@@ -104,13 +104,14 @@
             this.flavour_combo_bx.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(113)))), ((int)(((byte)(67)))));
             this.flavour_combo_bx.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(113)))), ((int)(((byte)(67)))));
             this.flavour_combo_bx.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(113)))), ((int)(((byte)(67)))));
-            this.flavour_combo_bx.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flavour_combo_bx.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.flavour_combo_bx.ForeColor = System.Drawing.Color.White;
             this.flavour_combo_bx.FormattingEnabled = true;
             this.flavour_combo_bx.ItemHeight = 30;
             this.flavour_combo_bx.Items.AddRange(new object[] {
             "caramel",
-            "apple"});
+            "apple",
+            "vanilla"});
             this.flavour_combo_bx.ItemsAppearance.ForeColor = System.Drawing.Color.White;
             this.flavour_combo_bx.Location = new System.Drawing.Point(117, 267);
             this.flavour_combo_bx.Name = "flavour_combo_bx";

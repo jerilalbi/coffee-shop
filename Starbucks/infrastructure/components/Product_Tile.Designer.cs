@@ -39,6 +39,8 @@
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.prod_amount = new System.Windows.Forms.Label();
             this.cart_prod_img = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.size_txt = new System.Windows.Forms.Label();
+            this.flavour_txt = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel4.SuspendLayout();
@@ -62,6 +64,8 @@
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel1.BorderRadius = 25;
+            this.guna2Panel1.Controls.Add(this.flavour_txt);
+            this.guna2Panel1.Controls.Add(this.size_txt);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
             this.guna2Panel1.Controls.Add(this.price_label);
             this.guna2Panel1.Controls.Add(this.guna2Panel4);
@@ -187,6 +191,28 @@
             this.cart_prod_img.TabStop = false;
             this.cart_prod_img.UseTransparentBackground = true;
             // 
+            // size_txt
+            // 
+            this.size_txt.AutoSize = true;
+            this.size_txt.Font = new System.Drawing.Font("Baskerville Old Face", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.size_txt.ForeColor = System.Drawing.SystemColors.Control;
+            this.size_txt.Location = new System.Drawing.Point(125, 68);
+            this.size_txt.Name = "size_txt";
+            this.size_txt.Size = new System.Drawing.Size(93, 32);
+            this.size_txt.TabIndex = 8;
+            this.size_txt.Text = " small,";
+            // 
+            // flavour_txt
+            // 
+            this.flavour_txt.AutoSize = true;
+            this.flavour_txt.Font = new System.Drawing.Font("Baskerville Old Face", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flavour_txt.ForeColor = System.Drawing.SystemColors.Control;
+            this.flavour_txt.Location = new System.Drawing.Point(209, 68);
+            this.flavour_txt.Name = "flavour_txt";
+            this.flavour_txt.Size = new System.Drawing.Size(22, 32);
+            this.flavour_txt.TabIndex = 9;
+            this.flavour_txt.Text = " ";
+            // 
             // Product_Tile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -222,5 +248,7 @@
         private System.Windows.Forms.Label price_label;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private System.Windows.Forms.Label size_txt;
+        private System.Windows.Forms.Label flavour_txt;
     }
 }

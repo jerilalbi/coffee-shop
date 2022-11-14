@@ -210,6 +210,7 @@
             this.guna2TileButton1.Size = new System.Drawing.Size(264, 59);
             this.guna2TileButton1.TabIndex = 22;
             this.guna2TileButton1.Text = "PAY NOW";
+            this.guna2TileButton1.Click += new System.EventHandler(this.guna2TileButton1_Click);
             // 
             // Screen_orderSum
             // 

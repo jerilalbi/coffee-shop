@@ -37,7 +37,9 @@
             this.prod_name = new Guna.UI2.WinForms.Guna2TextBox();
             this.prod_price = new Guna.UI2.WinForms.Guna2TextBox();
             this.add_btn = new Guna.UI2.WinForms.Guna2TileButton();
+            this.prod_img = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prod_img)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -82,7 +84,7 @@
             this.category_comboBx.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.category_comboBx.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.category_comboBx.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.category_comboBx.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.category_comboBx.ForeColor = System.Drawing.Color.Black;
             this.category_comboBx.ItemHeight = 30;
             this.category_comboBx.Items.AddRange(new object[] {
             "Hot Coffee",
@@ -94,6 +96,7 @@
             this.category_comboBx.Name = "category_comboBx";
             this.category_comboBx.Size = new System.Drawing.Size(177, 36);
             this.category_comboBx.TabIndex = 5;
+            this.category_comboBx.SelectedIndexChanged += new System.EventHandler(this.category_comboBx_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -123,6 +126,7 @@
             this.add_btn_click.Size = new System.Drawing.Size(157, 40);
             this.add_btn_click.TabIndex = 7;
             this.add_btn_click.Text = "ADD";
+            this.add_btn_click.Click += new System.EventHandler(this.add_btn_click_Click);
             // 
             // prod_name
             // 
@@ -192,10 +196,20 @@
             this.add_btn.Text = "ADD";
             this.add_btn.Click += new System.EventHandler(this.add_btn_Click);
             // 
+            // prod_img
+            // 
+            this.prod_img.ImageRotate = 0F;
+            this.prod_img.Location = new System.Drawing.Point(473, 178);
+            this.prod_img.Name = "prod_img";
+            this.prod_img.Size = new System.Drawing.Size(128, 116);
+            this.prod_img.TabIndex = 11;
+            this.prod_img.TabStop = false;
+            // 
             // Dash_addProd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.prod_img);
             this.Controls.Add(this.add_btn);
             this.Controls.Add(this.prod_price);
             this.Controls.Add(this.prod_name);
@@ -208,6 +222,7 @@
             this.Name = "Dash_addProd";
             this.Size = new System.Drawing.Size(1171, 687);
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prod_img)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,5 +239,6 @@
         private Guna.UI2.WinForms.Guna2TextBox prod_name;
         private Guna.UI2.WinForms.Guna2TextBox prod_price;
         private Guna.UI2.WinForms.Guna2TileButton add_btn;
+        private Guna.UI2.WinForms.Guna2PictureBox prod_img;
     }
 }

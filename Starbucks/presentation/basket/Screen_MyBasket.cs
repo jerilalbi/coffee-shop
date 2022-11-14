@@ -1,9 +1,13 @@
 ﻿using Starbucks.application.datas;
+using Starbucks.domain.user;
 using Starbucks.infrastructure.components;
+using Starbucks.presentation.email;
+using Starbucks.presentation.product;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -40,21 +44,39 @@ namespace Starbucks.presentation.basket
                 next_btn.Visible = false;
             }
             else {
-                for (int i = 0; i < 5; i++)
+                AddCart cart = new AddCart();
+                SqlDataReader cartdata = cart.showCart();
+                while (cartdata.Read())
                 {
+                   byte[] photo_aray = (byte[])cartdata["image"];
                     cart_items_panel.Controls.Add(
                         new Product_Tile
                         {
-                            Title = "Pumbikn\nFrappuccino",
-                            Image = Starbucks.Properties.Resources.prod_frap,
-                            Price = 785,
+
+                            Title = cartdata["name"].ToString(),
+                            Image = photo_aray,
+                            Price = int.Parse( cartdata["price"].ToString()),
                         });
-                    data.totalPrice += 785;
+                    data.totalPrice +=int.Parse( cartdata["price"].ToString());
                     total_price.Text = $"Total: {data.totalPrice.ToString()}";
                     total_price.Refresh();
                 }
             }
            
+        }
+
+        private void next_btn_Click(object sender, EventArgs e)
+        {
+            Screen_email email = new Screen_email();
+            email.Show();
+            Close();
+        }
+
+        private void back_button_Click(object sender, EventArgs e)
+        {
+            Screen_Product product = new Screen_Product(1);
+            product.Show();
+            Hide();
         }
     }
 }

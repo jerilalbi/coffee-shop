@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Starbucks.application.datas;
+using Starbucks.application.events;
+using Starbucks.presentation.final;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,7 +18,7 @@ namespace Starbucks.presentation.summary
         bool isTakeAway = false;
         bool isDinein = true;
        static int packing_crg = 0;
-        static int  total = 320;
+        static int  total = data.totalPrice;
        static double gst = total*.10;
         int final_amt = total + packing_crg + Convert.ToInt32(gst);
         public Screen_orderSum()
@@ -86,5 +89,13 @@ namespace Starbucks.presentation.summary
             }
         }
 
+        private void guna2TileButton1_Click(object sender, EventArgs e)
+        {
+            Email email = new Email();
+            email.send();
+            Screen_final final = new Screen_final();
+            final.Show();
+            Hide();
+        }
     }
 }

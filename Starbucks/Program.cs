@@ -1,5 +1,6 @@
 ﻿using Starbucks.presentation.admin.dashboard;
 using Starbucks.presentation.login;
+using Starbucks.presentation.payment;
 using Starbucks.presentation.product;
 using System;
 using System.Windows.Forms;
@@ -16,7 +17,7 @@ namespace Starbucks
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Screen_Dashboard());
+            Application.Run(new Screen_Login());
         }
     }
 }

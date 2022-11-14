@@ -1,4 +1,5 @@
 ﻿using Starbucks.application.datas;
+using Starbucks.presentation.summary;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +22,9 @@ namespace Starbucks.presentation.email
         private void next_btn_Click(object sender, EventArgs e)
         {
             data.emailId = email_textBox.Text;
+            Screen_orderSum summary = new Screen_orderSum();
+            summary.Show();
+            Close();
         }
     }
 }

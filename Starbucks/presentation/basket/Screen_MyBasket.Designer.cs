@@ -76,6 +76,7 @@
             this.next_btn.Size = new System.Drawing.Size(179, 63);
             this.next_btn.TabIndex = 25;
             this.next_btn.Text = "NEXT";
+            this.next_btn.Click += new System.EventHandler(this.next_btn_Click);
             // 
             // cart_btn
             // 
@@ -104,6 +105,7 @@
             this.back_button.TabIndex = 19;
             this.back_button.TabStop = false;
             this.back_button.UseTransparentBackground = true;
+            this.back_button.Click += new System.EventHandler(this.back_button_Click);
             // 
             // cart_items_panel
             // 

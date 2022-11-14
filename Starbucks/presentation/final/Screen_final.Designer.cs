@@ -56,7 +56,7 @@
             this.starbucks_txt.Font = new System.Drawing.Font("Baskerville Old Face", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.starbucks_txt.Location = new System.Drawing.Point(28, 215);
             this.starbucks_txt.Name = "starbucks_txt";
-            this.starbucks_txt.Size = new System.Drawing.Size(1099, 50);
+            this.starbucks_txt.Size = new System.Drawing.Size(1070, 49);
             this.starbucks_txt.TabIndex = 1;
             this.starbucks_txt.Text = "Thank you for using Starbucks. Enjoy the day in Starbucks";
             // 
@@ -76,6 +76,7 @@
             this.exit_btn.Size = new System.Drawing.Size(190, 75);
             this.exit_btn.TabIndex = 2;
             this.exit_btn.Text = "EXIT";
+            this.exit_btn.Click += new System.EventHandler(this.exit_btn_Click);
             // 
             // next_btn
             // 

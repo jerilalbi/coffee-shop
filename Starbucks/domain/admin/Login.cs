@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Starbucks.presentation.login;
+using Starbucks.presentation.admin.dashboard;
 
 namespace Starbucks.domain.admin
 {
@@ -16,14 +17,14 @@ namespace Starbucks.domain.admin
         public bool adminLogin(String username,String password)
         {
             Screen_Login login = new Screen_Login();
-            screen_home home = new screen_home();
+            Screen_Dashboard dashboard = new Screen_Dashboard();
 
             SqlDataAdapter sda = new SqlDataAdapter($"SELECT COUNT(*) FROM login WHERE username='{username}' AND password='{password}'", Database.con);
             DataTable dt = new DataTable(); 
             sda.Fill(dt);
             if (dt.Rows[0][0].ToString() == "1")
             {
-                home.Show();
+                dashboard.Show();
                 return true;
             }
             else

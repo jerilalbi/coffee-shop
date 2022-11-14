@@ -24,3 +24,8 @@ J:\coding\.net\Starbucks\Starbucks\obj\Debug\Starbucks.presentation.admin.dashbo
 J:\coding\.net\Starbucks\Starbucks\obj\Debug\Starbucks.presentation.admin.dash_overview.Dash_Overview.resources
 J:\coding\.net\Starbucks\Starbucks\obj\Debug\Starbucks.presentation.admin.dash_add_exp.Dash_addExp.resources
 J:\coding\.net\Starbucks\Starbucks\obj\Debug\Starbucks.presentation.admin.dash_add_prod.Dash_addProd.resources
+J:\coding\.net\Starbucks\Starbucks\obj\Debug\Starbucks.presentation.payment.Screen_Payment.resources
+J:\coding\.net\Starbucks\Starbucks\bin\Debug\Newtonsoft.Json.dll
+J:\coding\.net\Starbucks\Starbucks\bin\Debug\Zen.Barcode.Core.dll
+J:\coding\.net\Starbucks\Starbucks\bin\Debug\ZKWeb.System.Drawing.dll
+J:\coding\.net\Starbucks\Starbucks\bin\Debug\Newtonsoft.Json.xml
