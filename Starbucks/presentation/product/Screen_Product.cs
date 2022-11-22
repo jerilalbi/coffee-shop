@@ -1,4 +1,5 @@
 ﻿using Guna.UI2.WinForms;
+using Starbucks.application.datas;
 using Starbucks.application.events;
 using Starbucks.domain;
 using Starbucks.domain.user;
@@ -23,6 +24,7 @@ namespace Starbucks.presentation.product
     {
 
         public static Screen_Product screen_product;
+        GetProduct products = new GetProduct();
         bool product_dynamic_island_active = false;
         int categoryNo;
         string category;
@@ -40,7 +42,7 @@ namespace Starbucks.presentation.product
                 categoryTile.Visible = false;
             }
             mouseClicks();
-            addProduct();
+            //addProduct();
         }
 
         void mouseClicks()
@@ -105,14 +107,14 @@ namespace Starbucks.presentation.product
             category_circleFill(category_no);
             dynamic_Island.srinkDynamicIsland(product_dynamicIsland, true);
             product_dynamic_island_active = false;
-            this.Refresh();
             addProduct();
+            this.Refresh();
         }
 
         void addProduct()
         {
-            GetProduct products = new GetProduct();
             SqlDataReader data = products.getData(category);
+            product_display_panel.Controls.Clear();
             while (data.Read())
             {
                 photo_aray = (byte[])data["image"];
@@ -190,6 +192,12 @@ namespace Starbucks.presentation.product
             Screen_MyBasket myBasket = new Screen_MyBasket();
             myBasket.Show();
             Hide();
+        }
+
+        private void Screen_Product_Load(object sender, EventArgs e)
+        {
+            addProduct();
+            cart_product_no.Text = $"{data.cartProducts}";
         }
     }
 }

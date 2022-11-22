@@ -1,4 +1,5 @@
 ﻿
+using IronBarCode;
 using Starbucks.application.datas;
 using Starbucks.domain;
 using Starbucks.domain.user;
@@ -40,7 +41,6 @@ namespace Starbucks.presentation.payment
 
         private void guna2TileButton1_Click(object sender, EventArgs e)
         {
-           
         }
     }
 }

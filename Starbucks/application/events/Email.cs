@@ -10,9 +10,9 @@ using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Net.Mime.MediaTypeNames;
 using System.IO;
 using System.DrawingCore.Imaging;
+using System.Drawing;
 
 namespace Starbucks.application.events
 {
@@ -22,6 +22,7 @@ namespace Starbucks.application.events
         string password = "dhdqtnbeuiafqesh";
         string text;
         MemoryStream stream;
+        System.Drawing.Image img;
 
 
         public void fetchData()
@@ -40,6 +41,10 @@ namespace Starbucks.application.events
        public void send()
         {
             fetchData();
+            MemoryStream ms = new MemoryStream();
+           img = Starbucks.Properties.Resources.prod_frap;
+            img.Save(ms, img.RawFormat);
+            Attachment attachment = new Attachment("C:\\Users\\devje\\Downloads\\PngItem_1740888.png");
             try
             {
                 MailMessage message = new MailMessage();
@@ -47,6 +52,11 @@ namespace Starbucks.application.events
                 message.Subject = "Starbucks";
                 message.To.Add(new MailAddress(data.emailId));
                 message.Body = text;
+               /* message.Body = String.Format(
+            "<h3>Client:  StarBucks Bill</h3>" +
+            @"<img height=""200"" width=""200"" src=""cid:{0}"" />", attachment.ContentId);
+                message.IsBodyHtml = true; */
+                message.Attachments.Add(attachment);
 
                 var smtp = new SmtpClient("smtp.gmail.com")
                 {

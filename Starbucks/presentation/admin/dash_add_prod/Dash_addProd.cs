@@ -87,7 +87,6 @@ namespace Starbucks.presentation.admin.dash_add_prod
         {
             if(prod_img.Image != null)
             {
-
                 ms = new MemoryStream();
                 prod_img.Image.Save(ms, prod_img.Image.RawFormat);
                 Console.WriteLine(ms.ToString());

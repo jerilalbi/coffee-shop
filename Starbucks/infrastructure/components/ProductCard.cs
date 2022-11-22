@@ -1,4 +1,6 @@
-﻿using Starbucks.domain.user;
+﻿using Starbucks.application.datas;
+using Starbucks.domain.user;
+using Starbucks.presentation.product;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -68,9 +70,11 @@ namespace Starbucks.infrastructure.components
             bool res = cart.addToCart(_title,price,size,flavour,count,bitImg);
             if (res)
             {
+               /* data.cartProducts++;
+                Screen_Product.screen_product.cart_product_no.Text = $"{data.cartProducts}";*/
                 successAddCart();
+                count++;
             }
-            count++;
         }
 
        async void successAddCart()

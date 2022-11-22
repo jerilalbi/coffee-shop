@@ -290,12 +290,12 @@
             // 
             this.cart_product_no.AutoSize = true;
             this.cart_product_no.BackColor = System.Drawing.Color.Transparent;
-            this.cart_product_no.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cart_product_no.Location = new System.Drawing.Point(1305, 26);
+            this.cart_product_no.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cart_product_no.Location = new System.Drawing.Point(1305, 28);
             this.cart_product_no.Name = "cart_product_no";
-            this.cart_product_no.Size = new System.Drawing.Size(21, 22);
+            this.cart_product_no.Size = new System.Drawing.Size(19, 20);
             this.cart_product_no.TabIndex = 22;
-            this.cart_product_no.Text = "0";
+            this.cart_product_no.Text = "1";
             // 
             // prod_dyna_island_timer
             // 
@@ -419,6 +419,7 @@
             this.Padding = new System.Windows.Forms.Padding(63, 0, 63, 0);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Product";
+            this.Load += new System.EventHandler(this.Screen_Product_Load);
             this.product_dynamicIsland.ResumeLayout(false);
             this.product_dynamicIsland.PerformLayout();
             this.h_coffee_category_tile.ResumeLayout(false);
@@ -461,11 +462,11 @@
         public System.Windows.Forms.Label c_coffee_label;
         private Guna.UI2.WinForms.Guna2PictureBox category_img;
         private Guna.UI2.WinForms.Guna2PictureBox cart_btn;
-        private System.Windows.Forms.Label cart_product_no;
         private System.Windows.Forms.Timer prod_dyna_island_timer;
         public Guna.UI2.WinForms.Guna2CirclePictureBox category_circle;
         private System.Windows.Forms.Label category_label;
         private Guna.UI2.WinForms.Guna2TileButton next_btn;
         private System.Windows.Forms.FlowLayoutPanel product_display_panel;
+        public System.Windows.Forms.Label cart_product_no;
     }
 }

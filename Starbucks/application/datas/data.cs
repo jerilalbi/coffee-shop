@@ -10,5 +10,6 @@ namespace Starbucks.application.datas
     {
         public static int totalPrice;
         public static String emailId;
+        public static int cartProducts = 0;
     }
 }

@@ -130,6 +130,7 @@
             this.Name = "Screen_MyBasket";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MyBasket";
+            this.Load += new System.EventHandler(this.Screen_MyBasket_Load);
             ((System.ComponentModel.ISupportInitialize)(this.cart_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.back_button)).EndInit();
             this.ResumeLayout(false);
@@ -143,7 +144,7 @@
         private System.Windows.Forms.Label my_basket_label;
         private Guna.UI2.WinForms.Guna2PictureBox cart_btn;
         private Guna.UI2.WinForms.Guna2TileButton next_btn;
-        private System.Windows.Forms.FlowLayoutPanel cart_items_panel;
         public System.Windows.Forms.Label total_price;
+        public System.Windows.Forms.FlowLayoutPanel cart_items_panel;
     }
 }

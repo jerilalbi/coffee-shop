@@ -1,4 +1,5 @@
 ﻿using Starbucks.application.datas;
+using Starbucks.domain.user;
 using Starbucks.presentation.basket;
 using System;
 using System.Collections.Generic;
@@ -27,6 +28,7 @@ namespace Starbucks.infrastructure.components
         private byte[] _image;
         private String _title;
         private int _price;
+        private string _name;
         private string _size;
         private string _flavour;
         private int _count;
@@ -46,10 +48,16 @@ namespace Starbucks.infrastructure.components
             set { _title = value; cart_prod_label.Text = value; }
         }
 
+        public String Keyname
+        {
+            get { return _name; }
+            set { _name = value;}
+        }
+
         public int Price
         {
             get { return _price; }
-            set { _price = value; price_label.Text = $"Price: {value}"; }
+            set { _price = value; price_label.Text = $"Price: {value * prod_count}"; }
         }
 
         public string ProdSize
@@ -67,7 +75,9 @@ namespace Starbucks.infrastructure.components
         public int Count
         {
             get { return _count; }
-            set { _count = value; prod_count = value; }
+            set { _count = value;
+                prod_amount.Text = value.ToString();
+                prod_count = value; }
         }
 
         #endregion
@@ -92,23 +102,33 @@ namespace Starbucks.infrastructure.components
             }
             else
             {
-                prod_count--;
-                prod_amount.Text = prod_count.ToString();
-                price_label.Text = $"Price: {_price * prod_count}";
-                data.totalPrice -= _price;
-                Screen_MyBasket.sc_basket.total_price.Text = $"Total: {data.totalPrice}";
-                Screen_MyBasket.sc_basket.total_price.Refresh();
+                AddCart cart = new AddCart();
+                bool res = cart.updateCount(_title, _price, _size, _flavour,false);
+                if (res)
+                {
+                    prod_count--;
+                    prod_amount.Text = prod_count.ToString();
+                    price_label.Text = $"Price: {_price * prod_count}";
+                    data.totalPrice -= _price;
+                    Screen_MyBasket.sc_basket.total_price.Text = $"Total: {data.totalPrice}";
+                    Screen_MyBasket.sc_basket.total_price.Refresh();
+                }
             }
         }
 
         void increaseAmount()
         {
-            prod_count++;
-            prod_amount.Text = prod_count.ToString();
-            price_label.Text = $"Price: {_price * prod_count}";
-            data.totalPrice += _price;
-            Screen_MyBasket.sc_basket.total_price.Text = $"Total: {data.totalPrice}";
-            Screen_MyBasket.sc_basket.total_price.Refresh();
+            AddCart cart = new AddCart();
+            bool res = cart.updateCount(_title, _price, _size, _flavour,true);
+            if (res) 
+            {
+                prod_count++;
+                prod_amount.Text = prod_count.ToString();
+                price_label.Text = $"Price: {_price * prod_count}";
+                data.totalPrice += _price;
+                Screen_MyBasket.sc_basket.total_price.Text = $"Total: {data.totalPrice}";
+                Screen_MyBasket.sc_basket.total_price.Refresh();
+            }
         }
 
         private void guna2Panel4_Click(object sender, EventArgs e)
@@ -119,6 +139,20 @@ namespace Starbucks.infrastructure.components
         private void guna2Panel3_Click(object sender, EventArgs e)
         {
             decreaseAmount();
+        }
+
+        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        {
+            AddCart cart = new AddCart();
+            bool res = cart.deleteProdCart(_title, _price, _size, _flavour, prod_count);
+            if (res)
+            {
+                Screen_MyBasket.sc_basket.cart_items_panel.Controls.RemoveByKey(_name);
+                data.totalPrice -= _price * prod_count;
+                data.cartProducts--;
+                Screen_MyBasket.sc_basket.total_price.Text = $"Total: {data.totalPrice}";
+                Screen_MyBasket.sc_basket.total_price.Refresh();
+            }
         }
     }
 }

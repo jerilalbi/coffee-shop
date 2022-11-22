@@ -30,6 +30,8 @@
         {
             this.cart_prod_label = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.flavour_txt = new System.Windows.Forms.Label();
+            this.size_txt = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.price_label = new System.Windows.Forms.Label();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
@@ -39,8 +41,6 @@
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.prod_amount = new System.Windows.Forms.Label();
             this.cart_prod_img = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.size_txt = new System.Windows.Forms.Label();
-            this.flavour_txt = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel4.SuspendLayout();
@@ -79,6 +79,28 @@
             this.guna2Panel1.Size = new System.Drawing.Size(1257, 135);
             this.guna2Panel1.TabIndex = 0;
             // 
+            // flavour_txt
+            // 
+            this.flavour_txt.AutoSize = true;
+            this.flavour_txt.Font = new System.Drawing.Font("Baskerville Old Face", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flavour_txt.ForeColor = System.Drawing.SystemColors.Control;
+            this.flavour_txt.Location = new System.Drawing.Point(209, 68);
+            this.flavour_txt.Name = "flavour_txt";
+            this.flavour_txt.Size = new System.Drawing.Size(22, 32);
+            this.flavour_txt.TabIndex = 9;
+            this.flavour_txt.Text = " ";
+            // 
+            // size_txt
+            // 
+            this.size_txt.AutoSize = true;
+            this.size_txt.Font = new System.Drawing.Font("Baskerville Old Face", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.size_txt.ForeColor = System.Drawing.SystemColors.Control;
+            this.size_txt.Location = new System.Drawing.Point(125, 68);
+            this.size_txt.Name = "size_txt";
+            this.size_txt.Size = new System.Drawing.Size(93, 32);
+            this.size_txt.TabIndex = 8;
+            this.size_txt.Text = " small,";
+            // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -91,6 +113,7 @@
             this.guna2PictureBox1.TabIndex = 7;
             this.guna2PictureBox1.TabStop = false;
             this.guna2PictureBox1.UseTransparentBackground = true;
+            this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
             // 
             // price_label
             // 
@@ -190,28 +213,6 @@
             this.cart_prod_img.TabIndex = 0;
             this.cart_prod_img.TabStop = false;
             this.cart_prod_img.UseTransparentBackground = true;
-            // 
-            // size_txt
-            // 
-            this.size_txt.AutoSize = true;
-            this.size_txt.Font = new System.Drawing.Font("Baskerville Old Face", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.size_txt.ForeColor = System.Drawing.SystemColors.Control;
-            this.size_txt.Location = new System.Drawing.Point(125, 68);
-            this.size_txt.Name = "size_txt";
-            this.size_txt.Size = new System.Drawing.Size(93, 32);
-            this.size_txt.TabIndex = 8;
-            this.size_txt.Text = " small,";
-            // 
-            // flavour_txt
-            // 
-            this.flavour_txt.AutoSize = true;
-            this.flavour_txt.Font = new System.Drawing.Font("Baskerville Old Face", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flavour_txt.ForeColor = System.Drawing.SystemColors.Control;
-            this.flavour_txt.Location = new System.Drawing.Point(209, 68);
-            this.flavour_txt.Name = "flavour_txt";
-            this.flavour_txt.Size = new System.Drawing.Size(22, 32);
-            this.flavour_txt.TabIndex = 9;
-            this.flavour_txt.Text = " ";
             // 
             // Product_Tile
             // 

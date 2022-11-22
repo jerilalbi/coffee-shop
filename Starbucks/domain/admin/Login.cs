@@ -16,14 +16,12 @@ namespace Starbucks.domain.admin
     {
         public bool adminLogin(String username,String password)
         {
-            Screen_Login login = new Screen_Login();
-            Screen_Dashboard dashboard = new Screen_Dashboard();
-
             SqlDataAdapter sda = new SqlDataAdapter($"SELECT COUNT(*) FROM login WHERE username='{username}' AND password='{password}'", Database.con);
             DataTable dt = new DataTable(); 
             sda.Fill(dt);
             if (dt.Rows[0][0].ToString() == "1")
             {
+                Screen_Dashboard dashboard = new Screen_Dashboard();
                 dashboard.Show();
                 return true;
             }
