@@ -38,6 +38,7 @@
             this.prod_price = new Guna.UI2.WinForms.Guna2TextBox();
             this.add_btn = new Guna.UI2.WinForms.Guna2TileButton();
             this.prod_img = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prod_img)).BeginInit();
             this.SuspendLayout();
@@ -48,9 +49,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(89, 110);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(194, 32);
+            this.label1.Size = new System.Drawing.Size(181, 32);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Add Expense";
+            this.label1.Text = "Add Product";
             // 
             // guna2CirclePictureBox1
             // 
@@ -205,10 +206,27 @@
             this.prod_img.TabIndex = 11;
             this.prod_img.TabStop = false;
             // 
+            // guna2ImageButton1
+            // 
+            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(42, 22);
+            this.guna2ImageButton1.Image = global::Starbucks.Properties.Resources.back_logo;
+            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
+            this.guna2ImageButton1.ImageRotate = 0F;
+            this.guna2ImageButton1.ImageSize = new System.Drawing.Size(40, 20);
+            this.guna2ImageButton1.Location = new System.Drawing.Point(14, 20);
+            this.guna2ImageButton1.Name = "guna2ImageButton1";
+            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(42, 22);
+            this.guna2ImageButton1.Size = new System.Drawing.Size(64, 54);
+            this.guna2ImageButton1.TabIndex = 12;
+            this.guna2ImageButton1.Click += new System.EventHandler(this.guna2ImageButton1_Click);
+            // 
             // Dash_addProd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.guna2ImageButton1);
             this.Controls.Add(this.prod_img);
             this.Controls.Add(this.add_btn);
             this.Controls.Add(this.prod_price);
@@ -240,5 +258,6 @@
         private Guna.UI2.WinForms.Guna2TextBox prod_price;
         private Guna.UI2.WinForms.Guna2TileButton add_btn;
         private Guna.UI2.WinForms.Guna2PictureBox prod_img;
+        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
     }
 }

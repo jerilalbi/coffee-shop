@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Starbucks.presentation.admin.dashboard;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,6 +30,14 @@ namespace Starbucks.presentation.admin.dash_add_exp
             await Task.Delay(2000);
             add_btn.Text = "ADD";
             add_btn.FillColor = Color.FromArgb(0, 102, 0);
+        }
+
+        private void guna2ImageButton1_Click(object sender, EventArgs e)
+        {
+            Dash_Exp dash_Exp = new Dash_Exp();
+            Screen_Dashboard.sc_dash.base_dashboard.Controls.Clear();
+            dash_Exp.BringToFront();
+            Screen_Dashboard.sc_dash.base_dashboard.Controls.Add(dash_Exp);
         }
     }
 }

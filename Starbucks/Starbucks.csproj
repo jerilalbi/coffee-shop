@@ -126,6 +126,18 @@
     <Compile Include="domain\Database.cs" />
     <Compile Include="domain\user\AddCart.cs" />
     <Compile Include="domain\user\GetProduct.cs" />
+    <Compile Include="infrastructure\components\Dash_ProdTile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="infrastructure\components\Dash_ProdTile.Designer.cs">
+      <DependentUpon>Dash_ProdTile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="infrastructure\components\Expense_Tile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="infrastructure\components\Expense_Tile.Designer.cs">
+      <DependentUpon>Expense_Tile.cs</DependentUpon>
+    </Compile>
     <Compile Include="infrastructure\components\ProductCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -150,11 +162,23 @@
     <Compile Include="presentation\admin\dash_add_exp\Dash_addExp.Designer.cs">
       <DependentUpon>Dash_addExp.cs</DependentUpon>
     </Compile>
+    <Compile Include="presentation\admin\dash_add_exp\Dash_Exp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="presentation\admin\dash_add_exp\Dash_Exp.Designer.cs">
+      <DependentUpon>Dash_Exp.cs</DependentUpon>
+    </Compile>
     <Compile Include="presentation\admin\dash_add_prod\Dash_addProd.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="presentation\admin\dash_add_prod\Dash_addProd.Designer.cs">
       <DependentUpon>Dash_addProd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="presentation\admin\dash_add_prod\Dash_Prod.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="presentation\admin\dash_add_prod\Dash_Prod.Designer.cs">
+      <DependentUpon>Dash_Prod.cs</DependentUpon>
     </Compile>
     <Compile Include="presentation\admin\dash_overview\Dash_Overview.cs">
       <SubType>UserControl</SubType>
@@ -212,6 +236,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="infrastructure\components\Dash_ProdTile.resx">
+      <DependentUpon>Dash_ProdTile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="infrastructure\components\Expense_Tile.resx">
+      <DependentUpon>Expense_Tile.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="infrastructure\components\ProductCard.resx">
       <DependentUpon>ProductCard.cs</DependentUpon>
     </EmbeddedResource>
@@ -224,8 +254,14 @@
     <EmbeddedResource Include="presentation\admin\dash_add_exp\Dash_addExp.resx">
       <DependentUpon>Dash_addExp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="presentation\admin\dash_add_exp\Dash_Exp.resx">
+      <DependentUpon>Dash_Exp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="presentation\admin\dash_add_prod\Dash_addProd.resx">
       <DependentUpon>Dash_addProd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentation\admin\dash_add_prod\Dash_Prod.resx">
+      <DependentUpon>Dash_Prod.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="presentation\admin\dash_overview\Dash_Overview.resx">
       <DependentUpon>Dash_Overview.cs</DependentUpon>
@@ -281,7 +317,9 @@
   <ItemGroup>
     <None Include="Resources\home_img.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\edit-logo.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\starbucks_logo.png" />
   </ItemGroup>
@@ -347,6 +385,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\take-away.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tick_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

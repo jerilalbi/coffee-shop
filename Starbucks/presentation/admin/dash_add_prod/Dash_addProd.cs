@@ -1,4 +1,6 @@
 ﻿using Starbucks.domain.admin;
+using Starbucks.presentation.admin.dash_add_exp;
+using Starbucks.presentation.admin.dashboard;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -93,6 +95,14 @@ namespace Starbucks.presentation.admin.dash_add_prod
                 return ms.GetBuffer();
             }
             return null;
+        }
+
+        private void guna2ImageButton1_Click(object sender, EventArgs e)
+        {
+            Dash_Prod dash_Prod = new Dash_Prod();
+            Screen_Dashboard.sc_dash.base_dashboard.Controls.Clear();
+            dash_Prod.BringToFront();
+            Screen_Dashboard.sc_dash.base_dashboard.Controls.Add(dash_Prod);
         }
     }
 }

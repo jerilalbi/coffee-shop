@@ -18,9 +18,11 @@ namespace Starbucks.presentation.admin.dashboard
     public partial class Screen_Dashboard : Form
     {
         Dash_Overview overview = new Dash_Overview();
+        public static Screen_Dashboard sc_dash;
 
         public Screen_Dashboard()
         {
+            sc_dash = this;
             InitializeComponent();
             addScreens(overview);
             
@@ -42,8 +44,8 @@ namespace Starbucks.presentation.admin.dashboard
         void dashboardBtnClick()
         {
             changeBtncolor(expenseBtn, add_exp_label);
-            changeBtncolor(add_prod, add_prod_label);
-            changeBtncolor(products, products_label);
+            changeBtncolor(products, add_prod_label);
+            changeBtncolor(employees, products_label);
             dashboardBtn.FillColor = Color.White;
             dashboard_btn_labe.ForeColor = Color.Black;
             addScreens(overview);
@@ -51,10 +53,10 @@ namespace Starbucks.presentation.admin.dashboard
 
         void expenseBtnClick()
         {
-            Dash_addExp expScreen = new Dash_addExp();
+            Dash_Exp expScreen = new Dash_Exp();
             changeBtncolor(dashboardBtn, dashboard_btn_labe);
-            changeBtncolor(add_prod, add_prod_label);
-            changeBtncolor(products, products_label);
+            changeBtncolor(products, add_prod_label);
+            changeBtncolor(employees, products_label);
             expenseBtn.FillColor = Color.White;
             add_exp_label.ForeColor = Color.Black;
             addScreens(expScreen);
@@ -62,21 +64,21 @@ namespace Starbucks.presentation.admin.dashboard
 
         void addProductBtn()
         {
-            Dash_addProd add_Product =  new Dash_addProd();
+            Dash_Prod dash_Prod = new Dash_Prod();
             changeBtncolor(dashboardBtn, dashboard_btn_labe);
             changeBtncolor(expenseBtn, add_exp_label);
-            changeBtncolor(products, products_label);
-            add_prod.FillColor = Color.White;
+            changeBtncolor(employees, products_label);
+            products.FillColor = Color.White;
             add_prod_label.ForeColor = Color.Black;
-            addScreens(add_Product);
+            addScreens(dash_Prod);
         }
 
         void productsBtn()
         {
             changeBtncolor(dashboardBtn, dashboard_btn_labe);
             changeBtncolor(expenseBtn, add_exp_label);
-            changeBtncolor(add_prod, add_prod_label);
-            products.FillColor = Color.White;
+            changeBtncolor(products, add_prod_label);
+            employees.FillColor = Color.White;
             products_label.ForeColor = Color.Black;
         }
 
@@ -126,5 +128,6 @@ namespace Starbucks.presentation.admin.dashboard
             login.Show();
             Close();
         }
+
     }
 }

@@ -30,9 +30,9 @@
         {
             this.sideMenu = new Guna.UI2.WinForms.Guna2Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.products = new Guna.UI2.WinForms.Guna2Panel();
+            this.employees = new Guna.UI2.WinForms.Guna2Panel();
             this.products_label = new System.Windows.Forms.Label();
-            this.add_prod = new Guna.UI2.WinForms.Guna2Panel();
+            this.products = new Guna.UI2.WinForms.Guna2Panel();
             this.add_prod_label = new System.Windows.Forms.Label();
             this.expenseBtn = new Guna.UI2.WinForms.Guna2Panel();
             this.add_exp_label = new System.Windows.Forms.Label();
@@ -42,8 +42,8 @@
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.base_dashboard = new Guna.UI2.WinForms.Guna2Panel();
             this.sideMenu.SuspendLayout();
+            this.employees.SuspendLayout();
             this.products.SuspendLayout();
-            this.add_prod.SuspendLayout();
             this.expenseBtn.SuspendLayout();
             this.dashboardBtn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
@@ -53,8 +53,8 @@
             // 
             this.sideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
             this.sideMenu.Controls.Add(this.label4);
+            this.sideMenu.Controls.Add(this.employees);
             this.sideMenu.Controls.Add(this.products);
-            this.sideMenu.Controls.Add(this.add_prod);
             this.sideMenu.Controls.Add(this.expenseBtn);
             this.sideMenu.Controls.Add(this.dashboardBtn);
             this.sideMenu.Controls.Add(this.label1);
@@ -77,20 +77,20 @@
             this.label4.Text = "SIGN OUT";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // products
+            // employees
             // 
-            this.products.BackColor = System.Drawing.Color.Transparent;
-            this.products.BorderColor = System.Drawing.SystemColors.Control;
-            this.products.BorderThickness = 1;
-            this.products.Controls.Add(this.products_label);
-            this.products.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.products.FillColor = System.Drawing.Color.Transparent;
-            this.products.ForeColor = System.Drawing.SystemColors.Control;
-            this.products.Location = new System.Drawing.Point(3, 352);
-            this.products.Name = "products";
-            this.products.Size = new System.Drawing.Size(235, 74);
-            this.products.TabIndex = 4;
-            this.products.Click += new System.EventHandler(this.products_Click);
+            this.employees.BackColor = System.Drawing.Color.Transparent;
+            this.employees.BorderColor = System.Drawing.SystemColors.Control;
+            this.employees.BorderThickness = 1;
+            this.employees.Controls.Add(this.products_label);
+            this.employees.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.employees.FillColor = System.Drawing.Color.Transparent;
+            this.employees.ForeColor = System.Drawing.SystemColors.Control;
+            this.employees.Location = new System.Drawing.Point(3, 352);
+            this.employees.Name = "employees";
+            this.employees.Size = new System.Drawing.Size(235, 74);
+            this.employees.TabIndex = 4;
+            this.employees.Click += new System.EventHandler(this.products_Click);
             // 
             // products_label
             // 
@@ -99,36 +99,36 @@
             this.products_label.ForeColor = System.Drawing.SystemColors.Control;
             this.products_label.Location = new System.Drawing.Point(47, 24);
             this.products_label.Name = "products_label";
-            this.products_label.Size = new System.Drawing.Size(132, 25);
+            this.products_label.Size = new System.Drawing.Size(144, 25);
             this.products_label.TabIndex = 0;
-            this.products_label.Text = "PRODUCTS";
+            this.products_label.Text = "EMPLOYEES";
             this.products_label.Click += new System.EventHandler(this.products_label_Click);
             // 
-            // add_prod
+            // products
             // 
-            this.add_prod.BackColor = System.Drawing.Color.Transparent;
-            this.add_prod.BorderColor = System.Drawing.SystemColors.Control;
-            this.add_prod.BorderThickness = 1;
-            this.add_prod.Controls.Add(this.add_prod_label);
-            this.add_prod.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.add_prod.FillColor = System.Drawing.Color.Transparent;
-            this.add_prod.ForeColor = System.Drawing.SystemColors.Control;
-            this.add_prod.Location = new System.Drawing.Point(3, 272);
-            this.add_prod.Name = "add_prod";
-            this.add_prod.Size = new System.Drawing.Size(235, 74);
-            this.add_prod.TabIndex = 4;
-            this.add_prod.Click += new System.EventHandler(this.add_prod_Click);
+            this.products.BackColor = System.Drawing.Color.Transparent;
+            this.products.BorderColor = System.Drawing.SystemColors.Control;
+            this.products.BorderThickness = 1;
+            this.products.Controls.Add(this.add_prod_label);
+            this.products.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.products.FillColor = System.Drawing.Color.Transparent;
+            this.products.ForeColor = System.Drawing.SystemColors.Control;
+            this.products.Location = new System.Drawing.Point(3, 272);
+            this.products.Name = "products";
+            this.products.Size = new System.Drawing.Size(235, 74);
+            this.products.TabIndex = 4;
+            this.products.Click += new System.EventHandler(this.add_prod_Click);
             // 
             // add_prod_label
             // 
             this.add_prod_label.AutoSize = true;
             this.add_prod_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.add_prod_label.ForeColor = System.Drawing.SystemColors.Control;
-            this.add_prod_label.Location = new System.Drawing.Point(33, 21);
+            this.add_prod_label.Location = new System.Drawing.Point(47, 25);
             this.add_prod_label.Name = "add_prod_label";
-            this.add_prod_label.Size = new System.Drawing.Size(168, 25);
+            this.add_prod_label.Size = new System.Drawing.Size(132, 25);
             this.add_prod_label.TabIndex = 0;
-            this.add_prod_label.Text = "ADD PRODUCT";
+            this.add_prod_label.Text = "PRODUCTS";
             this.add_prod_label.Click += new System.EventHandler(this.add_prod_label_Click);
             // 
             // expenseBtn
@@ -151,11 +151,11 @@
             this.add_exp_label.AutoSize = true;
             this.add_exp_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.add_exp_label.ForeColor = System.Drawing.SystemColors.Control;
-            this.add_exp_label.Location = new System.Drawing.Point(33, 21);
+            this.add_exp_label.Location = new System.Drawing.Point(54, 23);
             this.add_exp_label.Name = "add_exp_label";
-            this.add_exp_label.Size = new System.Drawing.Size(164, 25);
+            this.add_exp_label.Size = new System.Drawing.Size(128, 25);
             this.add_exp_label.TabIndex = 0;
-            this.add_exp_label.Text = "ADD EXPENSE";
+            this.add_exp_label.Text = "EXPENSES";
             this.add_exp_label.Click += new System.EventHandler(this.add_exp_label_Click);
             // 
             // dashboardBtn
@@ -228,10 +228,10 @@
             this.Text = "Dashboard";
             this.sideMenu.ResumeLayout(false);
             this.sideMenu.PerformLayout();
+            this.employees.ResumeLayout(false);
+            this.employees.PerformLayout();
             this.products.ResumeLayout(false);
             this.products.PerformLayout();
-            this.add_prod.ResumeLayout(false);
-            this.add_prod.PerformLayout();
             this.expenseBtn.ResumeLayout(false);
             this.expenseBtn.PerformLayout();
             this.dashboardBtn.ResumeLayout(false);
@@ -250,11 +250,11 @@
         private Guna.UI2.WinForms.Guna2Panel expenseBtn;
         private System.Windows.Forms.Label add_exp_label;
         private System.Windows.Forms.Label dashboard_btn_labe;
-        private Guna.UI2.WinForms.Guna2Panel base_dashboard;
         private System.Windows.Forms.Label label4;
-        private Guna.UI2.WinForms.Guna2Panel products;
+        private Guna.UI2.WinForms.Guna2Panel employees;
         private System.Windows.Forms.Label products_label;
-        private Guna.UI2.WinForms.Guna2Panel add_prod;
+        private Guna.UI2.WinForms.Guna2Panel products;
         private System.Windows.Forms.Label add_prod_label;
+        public Guna.UI2.WinForms.Guna2Panel base_dashboard;
     }
 }

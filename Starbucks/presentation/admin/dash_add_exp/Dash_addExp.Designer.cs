@@ -33,6 +33,7 @@
             this.exp_type = new Guna.UI2.WinForms.Guna2TextBox();
             this.exp_amount = new Guna.UI2.WinForms.Guna2TextBox();
             this.add_btn = new Guna.UI2.WinForms.Guna2TileButton();
+            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -128,10 +129,27 @@
             this.add_btn.Text = "ADD";
             this.add_btn.Click += new System.EventHandler(this.add_btn_Click);
             // 
+            // guna2ImageButton1
+            // 
+            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(42, 22);
+            this.guna2ImageButton1.Image = global::Starbucks.Properties.Resources.back_logo;
+            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
+            this.guna2ImageButton1.ImageRotate = 0F;
+            this.guna2ImageButton1.ImageSize = new System.Drawing.Size(40, 20);
+            this.guna2ImageButton1.Location = new System.Drawing.Point(14, 20);
+            this.guna2ImageButton1.Name = "guna2ImageButton1";
+            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(42, 22);
+            this.guna2ImageButton1.Size = new System.Drawing.Size(64, 54);
+            this.guna2ImageButton1.TabIndex = 7;
+            this.guna2ImageButton1.Click += new System.EventHandler(this.guna2ImageButton1_Click);
+            // 
             // Dash_addExp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.guna2ImageButton1);
             this.Controls.Add(this.add_btn);
             this.Controls.Add(this.exp_amount);
             this.Controls.Add(this.exp_type);
@@ -152,5 +170,6 @@
         private Guna.UI2.WinForms.Guna2TextBox exp_type;
         private Guna.UI2.WinForms.Guna2TextBox exp_amount;
         private Guna.UI2.WinForms.Guna2TileButton add_btn;
+        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
     }
 }

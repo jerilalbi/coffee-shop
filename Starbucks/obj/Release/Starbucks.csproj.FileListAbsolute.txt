@@ -65,3 +65,7 @@ J:\coding\.net\Starbucks\Starbucks\bin\Release\zxing.xml
 J:\coding\.net\Starbucks\Starbucks\bin\Release\ZXing.ImageSharp.V2.pdb
 J:\coding\.net\Starbucks\Starbucks\bin\Release\ZXing.ImageSharp.V2.xml
 J:\coding\.net\Starbucks\Starbucks\bin\Release\zxing.presentation.xml
+J:\coding\.net\Starbucks\Starbucks\obj\Release\Starbucks.infrastructure.components.Expense_Tile.resources
+J:\coding\.net\Starbucks\Starbucks\obj\Release\Starbucks.presentation.admin.dash_add_exp.Dash_Exp.resources
+J:\coding\.net\Starbucks\Starbucks\obj\Release\Starbucks.infrastructure.components.Dash_ProdTile.resources
+J:\coding\.net\Starbucks\Starbucks\obj\Release\Starbucks.presentation.admin.dash_add_prod.Dash_Prod.resources

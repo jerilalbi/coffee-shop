@@ -63,6 +63,16 @@ namespace Starbucks.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_logo {
+            get {
+                object obj = ResourceManager.GetObject("add_logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap back_logo {
             get {
                 object obj = ResourceManager.GetObject("back_logo", resourceCulture);
@@ -116,6 +126,16 @@ namespace Starbucks.Properties {
         internal static System.Drawing.Bitmap dine_in {
             get {
                 object obj = ResourceManager.GetObject("dine_in", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap edit_logo {
+            get {
+                object obj = ResourceManager.GetObject("edit-logo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -216,6 +236,16 @@ namespace Starbucks.Properties {
         internal static System.Drawing.Bitmap take_away {
             get {
                 object obj = ResourceManager.GetObject("take-away", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tick_logo {
+            get {
+                object obj = ResourceManager.GetObject("tick_logo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

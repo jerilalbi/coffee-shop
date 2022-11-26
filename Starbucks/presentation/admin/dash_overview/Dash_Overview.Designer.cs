@@ -43,6 +43,14 @@
             Guna.Charts.WinForms.ChartFont chartFont7 = new Guna.Charts.WinForms.ChartFont();
             Guna.Charts.WinForms.Tick tick3 = new Guna.Charts.WinForms.Tick();
             Guna.Charts.WinForms.ChartFont chartFont8 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.LPoint lPoint1 = new Guna.Charts.WinForms.LPoint();
+            Guna.Charts.WinForms.LPoint lPoint2 = new Guna.Charts.WinForms.LPoint();
+            Guna.Charts.WinForms.LPoint lPoint3 = new Guna.Charts.WinForms.LPoint();
+            Guna.Charts.WinForms.LPoint lPoint4 = new Guna.Charts.WinForms.LPoint();
+            Guna.Charts.WinForms.LPoint lPoint5 = new Guna.Charts.WinForms.LPoint();
+            Guna.Charts.WinForms.LPoint lPoint6 = new Guna.Charts.WinForms.LPoint();
+            Guna.Charts.WinForms.LPoint lPoint7 = new Guna.Charts.WinForms.LPoint();
+            Guna.Charts.WinForms.LPoint lPoint8 = new Guna.Charts.WinForms.LPoint();
             Guna.Charts.WinForms.ChartFont chartFont9 = new Guna.Charts.WinForms.ChartFont();
             Guna.Charts.WinForms.ChartFont chartFont10 = new Guna.Charts.WinForms.ChartFont();
             Guna.Charts.WinForms.ChartFont chartFont11 = new Guna.Charts.WinForms.ChartFont();
@@ -60,14 +68,6 @@
             Guna.Charts.WinForms.ChartFont chartFont16 = new Guna.Charts.WinForms.ChartFont();
             Guna.Charts.WinForms.LPoint lPoint9 = new Guna.Charts.WinForms.LPoint();
             Guna.Charts.WinForms.LPoint lPoint10 = new Guna.Charts.WinForms.LPoint();
-            Guna.Charts.WinForms.LPoint lPoint1 = new Guna.Charts.WinForms.LPoint();
-            Guna.Charts.WinForms.LPoint lPoint2 = new Guna.Charts.WinForms.LPoint();
-            Guna.Charts.WinForms.LPoint lPoint3 = new Guna.Charts.WinForms.LPoint();
-            Guna.Charts.WinForms.LPoint lPoint4 = new Guna.Charts.WinForms.LPoint();
-            Guna.Charts.WinForms.LPoint lPoint5 = new Guna.Charts.WinForms.LPoint();
-            Guna.Charts.WinForms.LPoint lPoint6 = new Guna.Charts.WinForms.LPoint();
-            Guna.Charts.WinForms.LPoint lPoint7 = new Guna.Charts.WinForms.LPoint();
-            Guna.Charts.WinForms.LPoint lPoint8 = new Guna.Charts.WinForms.LPoint();
             this.label4 = new System.Windows.Forms.Label();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.label6 = new System.Windows.Forms.Label();
@@ -81,12 +81,12 @@
             this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.gunaChart1 = new Guna.Charts.WinForms.GunaChart();
+            this.gunaLineDataset1 = new Guna.Charts.WinForms.GunaLineDataset();
             this.period_combobx = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Panel8 = new Guna.UI2.WinForms.Guna2Panel();
             this.gunaChart2 = new Guna.Charts.WinForms.GunaChart();
-            this.label12 = new System.Windows.Forms.Label();
             this.gunaPieDataset1 = new Guna.Charts.WinForms.GunaPieDataset();
-            this.gunaLineDataset1 = new Guna.Charts.WinForms.GunaLineDataset();
+            this.label12 = new System.Windows.Forms.Label();
             this.guna2Panel4.SuspendLayout();
             this.guna2Panel5.SuspendLayout();
             this.guna2Panel6.SuspendLayout();
@@ -268,6 +268,38 @@
             tick3.Font = chartFont8;
             this.gunaChart1.ZAxes.Ticks = tick3;
             // 
+            // gunaLineDataset1
+            // 
+            this.gunaLineDataset1.BorderColor = System.Drawing.Color.Empty;
+            lPoint1.Label = "March";
+            lPoint1.Y = 1D;
+            lPoint2.Label = "April";
+            lPoint2.Y = 8D;
+            lPoint3.Label = "May";
+            lPoint3.Y = 10D;
+            lPoint4.Label = "6";
+            lPoint4.Y = 0D;
+            lPoint5.Label = "4";
+            lPoint5.Y = 0D;
+            lPoint6.Label = "8";
+            lPoint6.Y = 0D;
+            lPoint7.Label = "6";
+            lPoint7.Y = 0D;
+            lPoint8.Label = "1";
+            lPoint8.Y = 0D;
+            this.gunaLineDataset1.DataPoints.AddRange(new Guna.Charts.WinForms.LPoint[] {
+            lPoint1,
+            lPoint2,
+            lPoint3,
+            lPoint4,
+            lPoint5,
+            lPoint6,
+            lPoint7,
+            lPoint8});
+            this.gunaLineDataset1.FillColor = System.Drawing.Color.Empty;
+            this.gunaLineDataset1.Label = "Revenue";
+            this.gunaLineDataset1.TargetChart = this.gunaChart1;
+            // 
             // period_combobx
             // 
             this.period_combobx.BackColor = System.Drawing.Color.Transparent;
@@ -280,7 +312,6 @@
             this.period_combobx.ItemHeight = 30;
             this.period_combobx.Items.AddRange(new object[] {
             "This Month",
-            "This Quarter",
             "This Year"});
             this.period_combobx.Location = new System.Drawing.Point(455, 15);
             this.period_combobx.Name = "period_combobx";
@@ -335,16 +366,6 @@
             tick6.Font = chartFont16;
             this.gunaChart2.ZAxes.Ticks = tick6;
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(15, 15);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(136, 25);
-            this.label12.TabIndex = 8;
-            this.label12.Text = "Top Demands";
-            // 
             // gunaPieDataset1
             // 
             lPoint9.Label = "Coffee";
@@ -357,37 +378,15 @@
             this.gunaPieDataset1.Label = "Pie1";
             this.gunaPieDataset1.TargetChart = this.gunaChart2;
             // 
-            // gunaLineDataset1
+            // label12
             // 
-            this.gunaLineDataset1.BorderColor = System.Drawing.Color.Empty;
-            lPoint1.Label = "March";
-            lPoint1.Y = 1D;
-            lPoint2.Label = "April";
-            lPoint2.Y = 8D;
-            lPoint3.Label = "May";
-            lPoint3.Y = 10D;
-            lPoint4.Label = "6";
-            lPoint4.Y = 0D;
-            lPoint5.Label = "4";
-            lPoint5.Y = 0D;
-            lPoint6.Label = "8";
-            lPoint6.Y = 0D;
-            lPoint7.Label = "6";
-            lPoint7.Y = 0D;
-            lPoint8.Label = "1";
-            lPoint8.Y = 0D;
-            this.gunaLineDataset1.DataPoints.AddRange(new Guna.Charts.WinForms.LPoint[] {
-            lPoint1,
-            lPoint2,
-            lPoint3,
-            lPoint4,
-            lPoint5,
-            lPoint6,
-            lPoint7,
-            lPoint8});
-            this.gunaLineDataset1.FillColor = System.Drawing.Color.Empty;
-            this.gunaLineDataset1.Label = "Revenue";
-            this.gunaLineDataset1.TargetChart = this.gunaChart1;
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(15, 15);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(136, 25);
+            this.label12.TabIndex = 8;
+            this.label12.Text = "Top Demands";
             // 
             // Dash_Overview
             // 
