@@ -122,6 +122,7 @@
     <Compile Include="application\events\Dynamic_island.cs" />
     <Compile Include="application\events\Email.cs" />
     <Compile Include="domain\admin\AddProduct.cs" />
+    <Compile Include="domain\admin\AdminDbOP.cs" />
     <Compile Include="domain\admin\Login.cs" />
     <Compile Include="domain\Database.cs" />
     <Compile Include="domain\user\AddCart.cs" />
@@ -131,6 +132,12 @@
     </Compile>
     <Compile Include="infrastructure\components\Dash_ProdTile.Designer.cs">
       <DependentUpon>Dash_ProdTile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="infrastructure\components\Employee_Tile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="infrastructure\components\Employee_Tile.Designer.cs">
+      <DependentUpon>Employee_Tile.cs</DependentUpon>
     </Compile>
     <Compile Include="infrastructure\components\Expense_Tile.cs">
       <SubType>UserControl</SubType>
@@ -179,6 +186,18 @@
     </Compile>
     <Compile Include="presentation\admin\dash_add_prod\Dash_Prod.Designer.cs">
       <DependentUpon>Dash_Prod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="presentation\admin\dash_employee\dash_add_employ.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="presentation\admin\dash_employee\dash_add_employ.Designer.cs">
+      <DependentUpon>dash_add_employ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="presentation\admin\dash_employee\Dash_Employ.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="presentation\admin\dash_employee\Dash_Employ.Designer.cs">
+      <DependentUpon>Dash_Employ.cs</DependentUpon>
     </Compile>
     <Compile Include="presentation\admin\dash_overview\Dash_Overview.cs">
       <SubType>UserControl</SubType>
@@ -239,6 +258,9 @@
     <EmbeddedResource Include="infrastructure\components\Dash_ProdTile.resx">
       <DependentUpon>Dash_ProdTile.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="infrastructure\components\Employee_Tile.resx">
+      <DependentUpon>Employee_Tile.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="infrastructure\components\Expense_Tile.resx">
       <DependentUpon>Expense_Tile.cs</DependentUpon>
     </EmbeddedResource>
@@ -262,6 +284,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="presentation\admin\dash_add_prod\Dash_Prod.resx">
       <DependentUpon>Dash_Prod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentation\admin\dash_employee\dash_add_employ.resx">
+      <DependentUpon>dash_add_employ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentation\admin\dash_employee\Dash_Employ.resx">
+      <DependentUpon>Dash_Employ.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="presentation\admin\dash_overview\Dash_Overview.resx">
       <DependentUpon>Dash_Overview.cs</DependentUpon>

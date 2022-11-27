@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Starbucks.domain.admin;
+using Starbucks.presentation.admin.dash_add_exp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.Design;
@@ -23,11 +25,14 @@ namespace Starbucks.infrastructure.components
         #region properties
         private string _exptype;
         private int _expAmount;
+        private int _expMonth;
+        private int _expYear;
+        private string _tileName;
 
         public string ExpType
         {
             get { return _exptype; }
-            set { _exptype = value; expTypeLabel.Text = value; }
+            set { _exptype = value; expTypeLabel.Text = value; expTypeTxt.Text = $"{value}"; }
         }
 
         public int ExpAmount
@@ -37,7 +42,32 @@ namespace Starbucks.infrastructure.components
             {
                 _expAmount = value;
                 expAmountLabel.Text = $"{value}";
+                expAmtTxt.Text = $"{value}";
             }
+        }
+
+        public int ExpMonth
+        {
+            get { return _expMonth; }
+            set
+            {
+                _expMonth = value;
+            }
+        }
+
+        public int ExpYear
+        {
+            get { return _expYear; }
+            set
+            {
+                _expYear = value;
+            }
+        }
+
+        public string TileName
+        {
+            get { return _tileName; }
+            set { _tileName = value; }
         }
 
         #endregion
@@ -54,13 +84,32 @@ namespace Starbucks.infrastructure.components
             }
             else
             {
-                expTypeLabel.Visible = true;
-                expAmountLabel.Visible = true;
-                expTypeTxt.Visible = false;
-                expAmtTxt.Visible = false;
-                editBtn.Image = Starbucks.Properties.Resources.edit_logo;
+                AdminDbOP dbOP = new AdminDbOP();
+                bool result = dbOP.adminQuery($"update expense set type = '{expTypeTxt.Text}',amount = {expAmtTxt.Text} where type = '{_exptype}' and amount = {_expAmount} and month = {_expMonth} and year = {_expYear}");
+                if (result)
+                {
+                    expTypeLabel.Visible = true;
+                    expAmountLabel.Visible = true;
+                    expTypeTxt.Visible = false;
+                    expAmtTxt.Visible = false;
+                    expTypeLabel.Text = expTypeTxt.Text;
+                    expAmountLabel.Text = expAmtTxt.Text;
+                    editBtn.Image = Starbucks.Properties.Resources.edit_logo;
+                    Dash_Exp.Dashexpense.fetchAlldata();
+                }
             }
             isEdit = !isEdit;
+        }
+
+        private void deleteBtn_Click(object sender, EventArgs e)
+        {
+            AdminDbOP dbOP = new AdminDbOP();
+            bool result = dbOP.adminQuery($"delete from expense where type = '{_exptype}' and amount = {_expAmount} and month = {_expMonth} and year = {_expYear} ");
+            if (result)
+            {
+                Dash_Exp.Dashexpense.expDisplayPanel.Controls.RemoveByKey(_tileName);
+                Dash_Exp.Dashexpense.fetchAlldata();
+            }
         }
     }
 }

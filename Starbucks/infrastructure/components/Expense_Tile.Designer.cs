@@ -131,6 +131,7 @@
             this.deleteBtn.PressedState.ImageSize = new System.Drawing.Size(32, 38);
             this.deleteBtn.Size = new System.Drawing.Size(42, 48);
             this.deleteBtn.TabIndex = 4;
+            this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
             // 
             // expAmountLabel
             // 

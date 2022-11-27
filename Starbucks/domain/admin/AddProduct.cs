@@ -30,5 +30,25 @@ namespace Starbucks.domain.admin
                 return false;
             }
         }
+
+        public bool updateProduct(string query,byte[] image)
+        {
+            if (Database.connection.State == ConnectionState.Closed)
+            {
+                Database.connection.Open();
+            }
+            SqlCommand cmd = new SqlCommand(query, Database.connection);
+            cmd.Parameters.AddWithValue("@image", image);
+            int res = cmd.ExecuteNonQuery();
+            Database.connection.Close();
+            if (res > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Starbucks.presentation.admin.dashboard;
+﻿using Starbucks.domain.admin;
+using Starbucks.presentation.admin.dashboard;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,7 +21,12 @@ namespace Starbucks.presentation.admin.dash_add_exp
 
         private void add_btn_Click(object sender, EventArgs e)
         {
-            addFunction();
+            AdminDbOP dbOP = new AdminDbOP();
+            bool expAdded = dbOP.expAdd(exp_type.Text.ToLower(),int.Parse(exp_amount.Text.ToString()));
+            if (expAdded)
+            {
+                addFunction();
+            }
         }
 
          async void addFunction()
@@ -38,6 +44,7 @@ namespace Starbucks.presentation.admin.dash_add_exp
             Screen_Dashboard.sc_dash.base_dashboard.Controls.Clear();
             dash_Exp.BringToFront();
             Screen_Dashboard.sc_dash.base_dashboard.Controls.Add(dash_Exp);
+            this.Dispose();
         }
     }
 }

@@ -23,7 +23,6 @@ namespace Starbucks.domain.user
             SqlDataAdapter checkAdpt = new SqlDataAdapter(checkQuery,Database.connection);
             DataTable dt = new DataTable();
             checkAdpt.Fill(dt);
-            Console.WriteLine($"res = {dt.Rows.Count} , query = {checkQuery}");
             if (dt.Rows[0][0].ToString() == "1")
             {
                 bool res = updateCount(prod_name, prod_amount, prod_size, prod_flavour, true);
@@ -50,8 +49,6 @@ namespace Starbucks.domain.user
                     return false;
                 }
             }
-            Console.WriteLine($"value = {data.cartProducts}");
-            
         }
 
         public SqlDataReader showCart()

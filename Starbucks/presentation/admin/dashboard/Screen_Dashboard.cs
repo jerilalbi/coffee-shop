@@ -1,6 +1,7 @@
 ﻿using Guna.UI2.WinForms;
 using Starbucks.presentation.admin.dash_add_exp;
 using Starbucks.presentation.admin.dash_add_prod;
+using Starbucks.presentation.admin.dash_employee;
 using Starbucks.presentation.admin.dash_overview;
 using Starbucks.presentation.login;
 using System;
@@ -73,13 +74,15 @@ namespace Starbucks.presentation.admin.dashboard
             addScreens(dash_Prod);
         }
 
-        void productsBtn()
+        void employeeBtn()
         {
+            Dash_Employ employ = new Dash_Employ();
             changeBtncolor(dashboardBtn, dashboard_btn_labe);
             changeBtncolor(expenseBtn, add_exp_label);
             changeBtncolor(products, add_prod_label);
             employees.FillColor = Color.White;
             products_label.ForeColor = Color.Black;
+            addScreens(employ);
         }
 
         private void guna2Panel3_Click(object sender, EventArgs e)
@@ -114,12 +117,12 @@ namespace Starbucks.presentation.admin.dashboard
 
         private void products_Click(object sender, EventArgs e)
         {
-            productsBtn();
+            employeeBtn();
         }
 
         private void products_label_Click(object sender, EventArgs e)
         {
-            productsBtn();
+            employeeBtn();
         }
 
         private void label4_Click(object sender, EventArgs e)

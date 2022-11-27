@@ -103,6 +103,7 @@ namespace Starbucks.presentation.admin.dash_add_prod
             Screen_Dashboard.sc_dash.base_dashboard.Controls.Clear();
             dash_Prod.BringToFront();
             Screen_Dashboard.sc_dash.base_dashboard.Controls.Add(dash_Prod);
+            this.Dispose();
         }
     }
 }

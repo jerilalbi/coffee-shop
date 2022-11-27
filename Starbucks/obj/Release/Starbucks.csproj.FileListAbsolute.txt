@@ -69,3 +69,6 @@ J:\coding\.net\Starbucks\Starbucks\obj\Release\Starbucks.infrastructure.componen
 J:\coding\.net\Starbucks\Starbucks\obj\Release\Starbucks.presentation.admin.dash_add_exp.Dash_Exp.resources
 J:\coding\.net\Starbucks\Starbucks\obj\Release\Starbucks.infrastructure.components.Dash_ProdTile.resources
 J:\coding\.net\Starbucks\Starbucks\obj\Release\Starbucks.presentation.admin.dash_add_prod.Dash_Prod.resources
+J:\coding\.net\Starbucks\Starbucks\obj\Release\Starbucks.infrastructure.components.Employee_Tile.resources
+J:\coding\.net\Starbucks\Starbucks\obj\Release\Starbucks.presentation.admin.dash_employee.dash_add_employ.resources
+J:\coding\.net\Starbucks\Starbucks\obj\Release\Starbucks.presentation.admin.dash_employee.Dash_Employ.resources
