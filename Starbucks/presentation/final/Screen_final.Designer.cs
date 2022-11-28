@@ -94,6 +94,7 @@
             this.next_btn.Size = new System.Drawing.Size(190, 75);
             this.next_btn.TabIndex = 3;
             this.next_btn.Text = "NEXT";
+            this.next_btn.Click += new System.EventHandler(this.next_btn_Click);
             // 
             // Screen_final
             // 

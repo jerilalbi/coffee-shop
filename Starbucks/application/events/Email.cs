@@ -38,24 +38,26 @@ namespace Starbucks.application.events
             Database.connection.Close();
         }
 
-       public void send()
+       public void send(string emailData)
         {
             fetchData();
             MemoryStream ms = new MemoryStream();
            img = Starbucks.Properties.Resources.prod_frap;
             img.Save(ms, img.RawFormat);
-            Attachment attachment = new Attachment("C:\\Users\\devje\\Downloads\\PngItem_1740888.png");
+            Attachment attachment = new Attachment("C:\\Users\\devje\\Downloads\\qrcode.png");
             try
             {
                 MailMessage message = new MailMessage();
                 message.From = new MailAddress(fromMail);
                 message.Subject = "Starbucks";
                 message.To.Add(new MailAddress(data.emailId));
-                message.Body = text;
+               // message.To.Add(new MailAddress("devjerilalbi@gmail.com"));
+
+                message.Body = emailData;
                /* message.Body = String.Format(
             "<h3>Client:  StarBucks Bill</h3>" +
-            @"<img height=""200"" width=""200"" src=""cid:{0}"" />", attachment.ContentId);
-                message.IsBodyHtml = true; */
+            @"<img height=""200"" width=""200"" src=""cid:{0}"" />", attachment.ContentId); */
+                message.IsBodyHtml = true; 
                 message.Attachments.Add(attachment);
 
                 var smtp = new SmtpClient("smtp.gmail.com")

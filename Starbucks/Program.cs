@@ -19,7 +19,7 @@ namespace Starbucks
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Screen_Dashboard());
+            Application.Run(new Screen_Login());
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Starbucks.application.datas;
 using Starbucks.application.events;
 using Starbucks.presentation.final;
+using Starbucks.presentation.payment;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -91,10 +92,8 @@ namespace Starbucks.presentation.summary
 
         private void guna2TileButton1_Click(object sender, EventArgs e)
         {
-            Email email = new Email();
-            email.send();
-            Screen_final final = new Screen_final();
-            final.Show();
+            Screen_Payment payment = new Screen_Payment();
+            payment.Show();
             Hide();
         }
     }

@@ -56,7 +56,6 @@
             this.guna2PictureBox7 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.starbucks_logo = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.progress_ind = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             this.home_dynamicIsland.SuspendLayout();
             this.h_coffee_category_tile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
@@ -433,30 +432,11 @@
             this.guna2PictureBox1.TabStop = false;
             this.guna2PictureBox1.UseTransparentBackground = true;
             // 
-            // progress_ind
-            // 
-            this.progress_ind.Animated = true;
-            this.progress_ind.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
-            this.progress_ind.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.progress_ind.ForeColor = System.Drawing.Color.White;
-            this.progress_ind.Location = new System.Drawing.Point(634, 129);
-            this.progress_ind.Minimum = 0;
-            this.progress_ind.Name = "progress_ind";
-            this.progress_ind.ProgressColor = System.Drawing.Color.White;
-            this.progress_ind.ProgressColor2 = System.Drawing.Color.White;
-            this.progress_ind.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.progress_ind.Size = new System.Drawing.Size(104, 104);
-            this.progress_ind.TabIndex = 19;
-            this.progress_ind.Text = "guna2CircleProgressBar1";
-            this.progress_ind.Value = 50;
-            this.progress_ind.Visible = false;
-            // 
             // screen_home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1421, 734);
-            this.Controls.Add(this.progress_ind);
             this.Controls.Add(this.guna2PictureBox7);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.starbucks_desc);
@@ -472,7 +452,6 @@
             this.Name = "screen_home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.screen_home_FormClosed);
             this.home_dynamicIsland.ResumeLayout(false);
             this.home_dynamicIsland.PerformLayout();
             this.h_coffee_category_tile.ResumeLayout(false);
@@ -520,7 +499,6 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
         public System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox7;
-        private Guna.UI2.WinForms.Guna2CircleProgressBar progress_ind;
     }
 }
 

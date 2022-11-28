@@ -420,5 +420,8 @@
   <ItemGroup>
     <None Include="Resources\add_logo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\upi-logo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

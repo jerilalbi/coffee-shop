@@ -1,4 +1,5 @@
-﻿using Starbucks.presentation.login;
+﻿using Starbucks.application.datas;
+using Starbucks.presentation.login;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,8 +23,17 @@ namespace Starbucks.presentation.final
 
         private void exit_btn_Click(object sender, EventArgs e)
         {
-            Screen_Login login = new Screen_Login();
-            login.Close();
+            Application.Exit();
         }
+
+        private void next_btn_Click(object sender, EventArgs e)
+        {
+            data datas = new data();
+            datas.clearData();
+            screen_home home = new screen_home();
+            home.Show();
+            Close();
+        }
+
     }
 }

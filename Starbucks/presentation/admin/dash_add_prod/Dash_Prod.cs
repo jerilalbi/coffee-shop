@@ -104,6 +104,7 @@ namespace Starbucks.presentation.admin.dash_add_prod
                     break;
 
             }
+            fetchData();
         }
     }
 }

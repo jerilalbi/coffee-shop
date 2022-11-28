@@ -79,7 +79,6 @@ namespace Starbucks
 
         private void guna2PictureBox4_Click(object sender, EventArgs e)
         {
-            progress_ind.Visible = true;
             Screen_Product screen_Product = new Screen_Product(1);
             screen_Product.Show();
             Hide();
@@ -87,7 +86,6 @@ namespace Starbucks
 
         private void guna2PictureBox2_Click(object sender, EventArgs e)
         {
-            progress_ind.Visible = true;
             Screen_Product screen_Product = new Screen_Product(2);
             screen_Product.Show();
             Hide();
@@ -95,7 +93,6 @@ namespace Starbucks
 
         private void c_coffee_label_Click(object sender, EventArgs e)
         {
-            progress_ind.Visible = true;
             Screen_Product screen_Product = new Screen_Product(2);
             screen_Product.Show();
             Hide();
@@ -103,7 +100,6 @@ namespace Starbucks
 
         private void guna2PictureBox3_Click(object sender, EventArgs e)
         {
-            progress_ind.Visible = true;
             Screen_Product screen_Product = new Screen_Product(4);
             screen_Product.Show();
             Hide();
@@ -111,7 +107,6 @@ namespace Starbucks
 
         private void label1_Click(object sender, EventArgs e)
         {
-            progress_ind.Visible = true;
             Screen_Product screen_Product = new Screen_Product(4);
             screen_Product.Show();
             Hide();
@@ -119,7 +114,6 @@ namespace Starbucks
 
         private void label2_Click(object sender, EventArgs e)
         {
-            progress_ind.Visible = true;
             Screen_Product screen_Product = new Screen_Product(1);
             screen_Product.Show();
             Hide();
@@ -127,7 +121,6 @@ namespace Starbucks
 
         private void guna2PictureBox5_Click(object sender, EventArgs e)
         {
-            progress_ind.Visible = true;
             Screen_Product screen_Product = new Screen_Product(3);
             screen_Product.Show();
             Hide();
@@ -135,7 +128,6 @@ namespace Starbucks
 
         private void label3_Click(object sender, EventArgs e)
         {
-            progress_ind.Visible = true;
             Screen_Product screen_Product = new Screen_Product(3);
             screen_Product.Show();
             Hide();
@@ -143,7 +135,6 @@ namespace Starbucks
 
         private void guna2PictureBox6_Click(object sender, EventArgs e)
         {
-            progress_ind.Visible = true;
             Screen_Product screen_Product = new Screen_Product(5);
             screen_Product.Show();
             Hide();
@@ -151,15 +142,11 @@ namespace Starbucks
 
         private void label4_Click(object sender, EventArgs e)
         {
-            progress_ind.Visible = true;
             Screen_Product screen_Product = new Screen_Product(5);
             screen_Product.Show();
             Hide();
         }
 
-        private void screen_home_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            progress_ind.Visible = false;
-        }
+        
     }
 }
