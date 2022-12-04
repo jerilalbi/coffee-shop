@@ -124,6 +124,7 @@ namespace Starbucks.presentation.product
                         Title = data["name"].ToString(),
                         Price = int.Parse(data["price"].ToString()),
                         Image = photo_aray,
+                        Category = category,
                     }) ;
             }
             data.Close();

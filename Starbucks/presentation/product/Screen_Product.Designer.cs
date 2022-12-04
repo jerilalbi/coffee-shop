@@ -296,6 +296,7 @@
             this.cart_product_no.Size = new System.Drawing.Size(19, 20);
             this.cart_product_no.TabIndex = 22;
             this.cart_product_no.Text = "1";
+            this.cart_product_no.Visible = false;
             // 
             // prod_dyna_island_timer
             // 

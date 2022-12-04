@@ -32,6 +32,7 @@ namespace Starbucks.infrastructure.components
         #region properties
         private byte[] _image;
         private String _title;
+        private String _category;
         private int _price;
         int count = 1;
 
@@ -53,6 +54,15 @@ namespace Starbucks.infrastructure.components
                 product_name.Text = value; }
         }
 
+        public String Category
+        {
+            get { return _title; }
+            set
+            {
+                _category = value;
+            }
+        }
+
         public int Price
         {
             get { return _price; }
@@ -67,11 +77,9 @@ namespace Starbucks.infrastructure.components
         private void add_to_basket_btn_Click(object sender, EventArgs e)
         {
            AddCart cart = new AddCart();
-            bool res = cart.addToCart(_title,price,size,flavour,count,bitImg);
+            bool res = cart.addToCart(_title,price,size,flavour,count,bitImg,_category);
             if (res)
             {
-               /* data.cartProducts++;
-                Screen_Product.screen_product.cart_product_no.Text = $"{data.cartProducts}";*/
                 successAddCart();
                 count++;
             }

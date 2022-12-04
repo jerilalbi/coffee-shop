@@ -15,10 +15,8 @@ namespace Starbucks.application.datas
 
         public void clearData()
         {
-            totalPrice = 0;
             AdminDbOP dbOP  = new AdminDbOP();
             dbOP.adminQuery("delete from cart");
-            totalPrice = 0;
         }
     }
 }

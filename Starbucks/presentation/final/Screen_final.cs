@@ -29,6 +29,7 @@ namespace Starbucks.presentation.final
         private void next_btn_Click(object sender, EventArgs e)
         {
             data datas = new data();
+            data.totalPrice = 0;
             datas.clearData();
             screen_home home = new screen_home();
             home.Show();

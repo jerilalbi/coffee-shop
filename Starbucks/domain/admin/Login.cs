@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Starbucks.presentation.login;
 using Starbucks.presentation.admin.dashboard;
+using Starbucks.presentation.employee;
 
 namespace Starbucks.domain.admin
 {
@@ -16,11 +17,17 @@ namespace Starbucks.domain.admin
     {
         public bool adminLogin(String username,String password)
         {
-            SqlDataAdapter sda = new SqlDataAdapter($"SELECT COUNT(*) FROM login WHERE username='{username}' AND password='{password}'", Database.con);
+            SqlDataAdapter sda = new SqlDataAdapter($"SELECT * FROM login WHERE email='{username}' AND password='{password}'", Database.con);
             DataTable dt = new DataTable(); 
             sda.Fill(dt);
-            if (dt.Rows[0][0].ToString() == "1")
+            if (dt.Rows.Count > 0)
             {
+                if(dt.Rows[0]["userType"].ToString() == "employee")
+                {
+                    Screen_Employee employee = new Screen_Employee();
+                    employee.Show();
+                    return true;
+                }
                 Screen_Dashboard dashboard = new Screen_Dashboard();
                 dashboard.Show();
                 return true;

@@ -1,23 +1,18 @@
 ﻿
-using IronBarCode;
-using Starbucks.application.datas;
+using Newtonsoft.Json.Linq;
+using SixLabors.ImageSharp.Memory;
 using Starbucks.application.events;
-using Starbucks.domain;
 using Starbucks.domain.admin;
-using Starbucks.domain.user;
-using Starbucks.infrastructure.components;
 using Starbucks.presentation.final;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
+using System.Drawing.Imaging;
 using System.Text;
-using System.Threading.Tasks;
+using System.Text.Json;
 using System.Windows.Forms;
-using ZXing.QrCode.Internal;
+using ZXing;
+using ZXing.QrCode;
 
 namespace Starbucks.presentation.payment
 {
@@ -25,7 +20,8 @@ namespace Starbucks.presentation.payment
     {
         int total;
         int amount = 1;
-        string prodJson = 
+        JObject productJSON;
+        string prodJsonString = 
             @"
 {
 ""products"" : [
@@ -54,7 +50,7 @@ namespace Starbucks.presentation.payment
         void getData()
         {
             AdminDbOP adminDbOP = new AdminDbOP();
-            SqlDataReader cartDetails = adminDbOP.adminDataFetchQuery("select name,price,count,size,flavour from cart");
+            SqlDataReader cartDetails = adminDbOP.adminDataFetchQuery("select name,price,count,size,flavour,category from cart");
             while (cartDetails.Read())
             {
                 emailData += 
@@ -68,7 +64,7 @@ namespace Starbucks.presentation.payment
 </tr>
                     ";
 
-                prodJson +=
+                prodJsonString +=
                     $@"
 {{
 ""name"": ""{cartDetails["name"]}"",
@@ -76,13 +72,14 @@ namespace Starbucks.presentation.payment
 ""count"": {cartDetails["count"]},
 ""size"": ""{cartDetails["size"]}"",
 ""flavour"": ""{cartDetails["flavour"]}"",
+""category"": ""{cartDetails["category"]}""
 }},
 ";
                 total += int.Parse(cartDetails["price"].ToString()) * int.Parse(cartDetails["count"].ToString());
             }
-            prodJson +=
+            prodJsonString +=
                 @"
-{}
+
 ]
 }
 ";
@@ -93,16 +90,26 @@ namespace Starbucks.presentation.payment
 </body>
 </html>
 ";
-            Console.WriteLine(prodJson);
+            productJSON = JObject.Parse(prodJsonString);
             cartDetails.Close();
+        }
+
+        void addSales()
+        {
+            Sales sales = new Sales();
+            foreach(var items in productJSON["products"])
+            {
+                sales.addSales(items["name"].ToString(), int.Parse(items["price"].ToString()), int.Parse(items["count"].ToString()), items["category"].ToString());
+            }
         }
 
         private void guna2TileButton1_Click(object sender, EventArgs e)
         {
             getData();
-            makeQrCode(prodJson, true);
+            makeQrCode(prodJsonString, true);
             Email email = new Email();
             email.send(emailData);
+           addSales();
             Screen_final finalScreen = new Screen_final();
             finalScreen.Show();
             Hide();
@@ -110,17 +117,25 @@ namespace Starbucks.presentation.payment
 
         private void Screen_Payment_Load(object sender, EventArgs e)
         {
-            qrCodebx.Image = makeQrCode($"upi://pay?pn=Jeril%20Albi&pa=jerilalbi11@oksbi&am={amount}",false);
+           qrCodebx.Image = makeQrCode($"upi://pay?pn=Jeril%20Albi&pa=jerilalbi11@oksbi&am={amount}", false);
         }
 
         Image makeQrCode(string message,bool prodQr)
         {
-            var qrcode = QRCodeWriter.CreateQrCodeWithLogo(message, "J:\\coding\\.net\\cafe management media\\starbucks_logo.png", 364);
+            var writer = new BarcodeWriter();
+            writer.Format = BarcodeFormat.QR_CODE;
+            writer.Options = new QrCodeEncodingOptions
+            {
+                Height = 364,
+                Width = 364,
+                Margin = 0,
+            };
+            var qrcode = writer.Write(message);
             if (prodQr)
             {
-                qrcode.SaveAsPng("C:\\Users\\devje\\Downloads\\qrcode.png");
+                qrcode.Save("J:\\coding\\.net\\Starbucks\\Starbucks\\presentation\\images\\qrcode.png");
             }
-            return qrcode.Image;
+            return qrcode;
         }
     }
 }

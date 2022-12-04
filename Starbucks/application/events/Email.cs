@@ -11,7 +11,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-using System.DrawingCore.Imaging;
 using System.Drawing;
 
 namespace Starbucks.application.events
@@ -44,7 +43,7 @@ namespace Starbucks.application.events
             MemoryStream ms = new MemoryStream();
            img = Starbucks.Properties.Resources.prod_frap;
             img.Save(ms, img.RawFormat);
-            Attachment attachment = new Attachment("C:\\Users\\devje\\Downloads\\qrcode.png");
+            Attachment attachment = new Attachment("J:\\coding\\.net\\Starbucks\\Starbucks\\presentation\\images\\qrcode.png");
             try
             {
                 MailMessage message = new MailMessage();

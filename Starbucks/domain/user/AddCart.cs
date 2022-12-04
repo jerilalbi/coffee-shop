@@ -13,7 +13,7 @@ namespace Starbucks.domain.user
 {
     internal class AddCart
     {
-        public bool addToCart(string prod_name, int prod_amount,string prod_size,string prod_flavour,int prod_count, byte[] image)
+        public bool addToCart(string prod_name, int prod_amount,string prod_size,string prod_flavour,int prod_count, byte[] image,string category)
         {
             if (Database.connection.State == ConnectionState.Closed)
             {
@@ -35,7 +35,7 @@ namespace Starbucks.domain.user
                     return false;
                 }
             }else {
-                string query = $"insert into cart values('{prod_name}',{prod_amount},{prod_count},'{prod_size}','{prod_flavour}',@image)";
+                string query = $"insert into cart values('{prod_name}',{prod_amount},{prod_count},'{prod_size}','{prod_flavour}',@image,'{category}')";
                 SqlCommand cmd = new SqlCommand(query, Database.connection);
                 cmd.Parameters.AddWithValue("@image", image);
                 int res = cmd.ExecuteNonQuery();

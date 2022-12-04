@@ -1,5 +1,6 @@
 ﻿using Starbucks.presentation.admin.dashboard;
 using Starbucks.presentation.basket;
+using Starbucks.presentation.employee;
 using Starbucks.presentation.login;
 using Starbucks.presentation.payment;
 using Starbucks.presentation.product;
@@ -19,7 +20,7 @@ namespace Starbucks
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Screen_Login());
+            Application.Run(new Screen_Employee());
         }
     }
 }

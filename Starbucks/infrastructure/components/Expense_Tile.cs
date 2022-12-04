@@ -6,7 +6,6 @@ using System.ComponentModel;
 using System.ComponentModel.Design;
 using System.Data;
 using System.Drawing;
-using System.DrawingCore;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;

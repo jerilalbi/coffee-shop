@@ -56,9 +56,9 @@
             this.total_price.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(113)))), ((int)(((byte)(67)))));
             this.total_price.Location = new System.Drawing.Point(933, 610);
             this.total_price.Name = "total_price";
-            this.total_price.Size = new System.Drawing.Size(179, 38);
+            this.total_price.Size = new System.Drawing.Size(128, 38);
             this.total_price.TabIndex = 24;
-            this.total_price.Text = "Total: 1805";
+            this.total_price.Text = "Total: 0";
             // 
             // next_btn
             // 
