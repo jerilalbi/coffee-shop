@@ -1,11 +1,13 @@
 ﻿using AForge.Video;
 using AForge.Video.DirectShow;
 using Newtonsoft.Json.Linq;
+using Starbucks.domain.admin;
 using Starbucks.infrastructure.components;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,7 +21,7 @@ namespace Starbucks.presentation.employee
     {
         FilterInfoCollection filterInfoCollection;
         VideoCaptureDevice videoCaptureDevice;
-        JObject prodJson;
+        int orderID;
         public Screen_Employee()
         {
             InitializeComponent();
@@ -73,17 +75,29 @@ namespace Starbucks.presentation.employee
             nextBtn.Visible = true;
 
             productsDisplay.Controls.Clear();
-            prodJson = JObject.Parse(data);
-            foreach (var items in prodJson["products"])
+            orderID = int.Parse(data);
+            AdminDbOP dbOP = new AdminDbOP();
+            SqlDataReader prodData = dbOP.adminDataFetchQuery($"select * from orders where order_id = {orderID}");
+            if (prodData.HasRows)
             {
-                productsDisplay.Controls.Add(new Final_Products
+                while (prodData.Read())
                 {
-                    Name = items["name"].ToString(),
-                    Prod_Size = items["size"].ToString(),
-                    Flavour = items["flavour"].ToString()
-                });
-                Console.WriteLine(items["name"].ToString());
+                    productsDisplay.Controls.Add(new Final_Products
+                    {
+                        Name = prodData["product_name"].ToString(),
+                        Prod_Size = prodData["size"].ToString(),
+                        Flavour = prodData["flavour"].ToString(),
+                        Count = prodData["count"].ToString(),
+                    });
+                }
             }
+            else
+            {
+                productsDisplay.Controls.Add(new Label { 
+                Text = "No Items",
+                });
+            }
+            prodData.Close();
 
         }
 
@@ -103,6 +117,8 @@ namespace Starbucks.presentation.employee
 
         private void guna2TileButton1_Click(object sender, EventArgs e)
         {
+            AdminDbOP dbOP = new AdminDbOP();
+            dbOP.adminQuery($"delete from orders where order_id = {orderID}");
             closeData();
             openCamera();
             timer1.Start();

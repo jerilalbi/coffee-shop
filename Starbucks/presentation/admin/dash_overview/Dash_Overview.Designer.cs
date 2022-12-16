@@ -28,70 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.Charts.WinForms.ChartFont chartFont1 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont2 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont3 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont4 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Grid grid1 = new Guna.Charts.WinForms.Grid();
-            Guna.Charts.WinForms.Tick tick1 = new Guna.Charts.WinForms.Tick();
-            Guna.Charts.WinForms.ChartFont chartFont5 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Grid grid2 = new Guna.Charts.WinForms.Grid();
-            Guna.Charts.WinForms.Tick tick2 = new Guna.Charts.WinForms.Tick();
-            Guna.Charts.WinForms.ChartFont chartFont6 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Grid grid3 = new Guna.Charts.WinForms.Grid();
-            Guna.Charts.WinForms.PointLabel pointLabel1 = new Guna.Charts.WinForms.PointLabel();
-            Guna.Charts.WinForms.ChartFont chartFont7 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Tick tick3 = new Guna.Charts.WinForms.Tick();
-            Guna.Charts.WinForms.ChartFont chartFont8 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.LPoint lPoint1 = new Guna.Charts.WinForms.LPoint();
-            Guna.Charts.WinForms.LPoint lPoint2 = new Guna.Charts.WinForms.LPoint();
-            Guna.Charts.WinForms.LPoint lPoint3 = new Guna.Charts.WinForms.LPoint();
-            Guna.Charts.WinForms.LPoint lPoint4 = new Guna.Charts.WinForms.LPoint();
-            Guna.Charts.WinForms.LPoint lPoint5 = new Guna.Charts.WinForms.LPoint();
-            Guna.Charts.WinForms.LPoint lPoint6 = new Guna.Charts.WinForms.LPoint();
-            Guna.Charts.WinForms.LPoint lPoint7 = new Guna.Charts.WinForms.LPoint();
-            Guna.Charts.WinForms.LPoint lPoint8 = new Guna.Charts.WinForms.LPoint();
-            Guna.Charts.WinForms.ChartFont chartFont9 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont10 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont11 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont12 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Grid grid4 = new Guna.Charts.WinForms.Grid();
-            Guna.Charts.WinForms.Tick tick4 = new Guna.Charts.WinForms.Tick();
-            Guna.Charts.WinForms.ChartFont chartFont13 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Grid grid5 = new Guna.Charts.WinForms.Grid();
-            Guna.Charts.WinForms.Tick tick5 = new Guna.Charts.WinForms.Tick();
-            Guna.Charts.WinForms.ChartFont chartFont14 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Grid grid6 = new Guna.Charts.WinForms.Grid();
-            Guna.Charts.WinForms.PointLabel pointLabel2 = new Guna.Charts.WinForms.PointLabel();
-            Guna.Charts.WinForms.ChartFont chartFont15 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Tick tick6 = new Guna.Charts.WinForms.Tick();
-            Guna.Charts.WinForms.ChartFont chartFont16 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.LPoint lPoint9 = new Guna.Charts.WinForms.LPoint();
-            Guna.Charts.WinForms.LPoint lPoint10 = new Guna.Charts.WinForms.LPoint();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label4 = new System.Windows.Forms.Label();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.noOrderVal = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label7 = new System.Windows.Forms.Label();
+            this.totExpVal = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label9 = new System.Windows.Forms.Label();
+            this.netRevVal = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
+            this.revenueChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label11 = new System.Windows.Forms.Label();
-            this.gunaChart1 = new Guna.Charts.WinForms.GunaChart();
-            this.gunaLineDataset1 = new Guna.Charts.WinForms.GunaLineDataset();
             this.period_combobx = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Panel8 = new Guna.UI2.WinForms.Guna2Panel();
-            this.gunaChart2 = new Guna.Charts.WinForms.GunaChart();
-            this.gunaPieDataset1 = new Guna.Charts.WinForms.GunaPieDataset();
+            this.productChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label12 = new System.Windows.Forms.Label();
             this.guna2Panel4.SuspendLayout();
             this.guna2Panel5.SuspendLayout();
             this.guna2Panel6.SuspendLayout();
             this.guna2Panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.revenueChart)).BeginInit();
             this.guna2Panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productChart)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -107,7 +73,7 @@
             // guna2Panel4
             // 
             this.guna2Panel4.BorderRadius = 15;
-            this.guna2Panel4.Controls.Add(this.label6);
+            this.guna2Panel4.Controls.Add(this.noOrderVal);
             this.guna2Panel4.Controls.Add(this.label5);
             this.guna2Panel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
             this.guna2Panel4.Location = new System.Drawing.Point(49, 88);
@@ -115,17 +81,16 @@
             this.guna2Panel4.Size = new System.Drawing.Size(253, 100);
             this.guna2Panel4.TabIndex = 3;
             // 
-            // label6
+            // noOrderVal
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.Control;
-            this.label6.Location = new System.Drawing.Point(171, 34);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 25);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "1574";
+            this.noOrderVal.AutoSize = true;
+            this.noOrderVal.BackColor = System.Drawing.Color.Transparent;
+            this.noOrderVal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.noOrderVal.ForeColor = System.Drawing.SystemColors.Control;
+            this.noOrderVal.Location = new System.Drawing.Point(171, 34);
+            this.noOrderVal.Name = "noOrderVal";
+            this.noOrderVal.Size = new System.Drawing.Size(0, 25);
+            this.noOrderVal.TabIndex = 1;
             // 
             // label5
             // 
@@ -142,25 +107,24 @@
             // guna2Panel5
             // 
             this.guna2Panel5.BorderRadius = 15;
-            this.guna2Panel5.Controls.Add(this.label7);
+            this.guna2Panel5.Controls.Add(this.totExpVal);
             this.guna2Panel5.Controls.Add(this.label8);
             this.guna2Panel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
-            this.guna2Panel5.Location = new System.Drawing.Point(464, 88);
+            this.guna2Panel5.Location = new System.Drawing.Point(454, 88);
             this.guna2Panel5.Name = "guna2Panel5";
             this.guna2Panel5.Size = new System.Drawing.Size(253, 100);
             this.guna2Panel5.TabIndex = 4;
             // 
-            // label7
+            // totExpVal
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.Control;
-            this.label7.Location = new System.Drawing.Point(171, 34);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(60, 25);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "1574";
+            this.totExpVal.AutoSize = true;
+            this.totExpVal.BackColor = System.Drawing.Color.Transparent;
+            this.totExpVal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totExpVal.ForeColor = System.Drawing.SystemColors.Control;
+            this.totExpVal.Location = new System.Drawing.Point(138, 34);
+            this.totExpVal.Name = "totExpVal";
+            this.totExpVal.Size = new System.Drawing.Size(0, 25);
+            this.totExpVal.TabIndex = 1;
             // 
             // label8
             // 
@@ -177,7 +141,7 @@
             // guna2Panel6
             // 
             this.guna2Panel6.BorderRadius = 15;
-            this.guna2Panel6.Controls.Add(this.label9);
+            this.guna2Panel6.Controls.Add(this.netRevVal);
             this.guna2Panel6.Controls.Add(this.label10);
             this.guna2Panel6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
             this.guna2Panel6.Location = new System.Drawing.Point(874, 88);
@@ -185,17 +149,16 @@
             this.guna2Panel6.Size = new System.Drawing.Size(253, 100);
             this.guna2Panel6.TabIndex = 5;
             // 
-            // label9
+            // netRevVal
             // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.Control;
-            this.label9.Location = new System.Drawing.Point(171, 34);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(60, 25);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "1574";
+            this.netRevVal.AutoSize = true;
+            this.netRevVal.BackColor = System.Drawing.Color.Transparent;
+            this.netRevVal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.netRevVal.ForeColor = System.Drawing.SystemColors.Control;
+            this.netRevVal.Location = new System.Drawing.Point(132, 34);
+            this.netRevVal.Name = "netRevVal";
+            this.netRevVal.Size = new System.Drawing.Size(0, 25);
+            this.netRevVal.TabIndex = 1;
             // 
             // label10
             // 
@@ -213,13 +176,44 @@
             // 
             this.guna2Panel7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
             this.guna2Panel7.BorderThickness = 2;
+            this.guna2Panel7.Controls.Add(this.revenueChart);
             this.guna2Panel7.Controls.Add(this.label11);
-            this.guna2Panel7.Controls.Add(this.gunaChart1);
-            this.guna2Panel7.Controls.Add(this.period_combobx);
             this.guna2Panel7.Location = new System.Drawing.Point(49, 231);
             this.guna2Panel7.Name = "guna2Panel7";
             this.guna2Panel7.Size = new System.Drawing.Size(633, 434);
             this.guna2Panel7.TabIndex = 7;
+            // 
+            // revenueChart
+            // 
+            chartArea1.AxisX.IsLabelAutoFit = false;
+            chartArea1.AxisX.LabelStyle.Angle = -90;
+            chartArea1.AxisX.LabelStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.AxisX.LabelStyle.Interval = 1D;
+            chartArea1.AxisX.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.Name = "ChartArea1";
+            this.revenueChart.ChartAreas.Add(chartArea1);
+            legend1.Enabled = false;
+            legend1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend1.IsTextAutoFit = false;
+            legend1.LegendStyle = System.Windows.Forms.DataVisualization.Charting.LegendStyle.Row;
+            legend1.Name = "Legend1";
+            legend1.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.revenueChart.Legends.Add(legend1);
+            this.revenueChart.Location = new System.Drawing.Point(22, 43);
+            this.revenueChart.Name = "revenueChart";
+            series1.BorderWidth = 5;
+            series1.ChartArea = "ChartArea1";
+            series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
+            series1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series1.IsXValueIndexed = true;
+            series1.LabelAngle = 90;
+            series1.Legend = "Legend1";
+            series1.Name = "total_revenue";
+            this.revenueChart.Series.Add(series1);
+            this.revenueChart.Size = new System.Drawing.Size(593, 370);
+            this.revenueChart.TabIndex = 8;
+            this.revenueChart.Text = "chart1";
+            this.revenueChart.GetToolTipText += new System.EventHandler<System.Windows.Forms.DataVisualization.Charting.ToolTipEventArgs>(this.revenueChart_GetToolTipText);
             // 
             // label11
             // 
@@ -227,78 +221,9 @@
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(17, 15);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(125, 25);
+            this.label11.Size = new System.Drawing.Size(139, 25);
             this.label11.TabIndex = 7;
-            this.label11.Text = "Net Revenue";
-            // 
-            // gunaChart1
-            // 
-            this.gunaChart1.BackColor = System.Drawing.Color.White;
-            this.gunaChart1.Datasets.AddRange(new Guna.Charts.Interfaces.IGunaDataset[] {
-            this.gunaLineDataset1});
-            chartFont1.FontName = "Arial";
-            this.gunaChart1.Legend.LabelFont = chartFont1;
-            this.gunaChart1.Location = new System.Drawing.Point(18, 67);
-            this.gunaChart1.Name = "gunaChart1";
-            this.gunaChart1.Size = new System.Drawing.Size(593, 352);
-            this.gunaChart1.TabIndex = 6;
-            chartFont2.FontName = "Arial";
-            chartFont2.Size = 12;
-            chartFont2.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            this.gunaChart1.Title.Font = chartFont2;
-            chartFont3.FontName = "Arial";
-            this.gunaChart1.Tooltips.BodyFont = chartFont3;
-            chartFont4.FontName = "Arial";
-            chartFont4.Size = 9;
-            chartFont4.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            this.gunaChart1.Tooltips.TitleFont = chartFont4;
-            this.gunaChart1.XAxes.GridLines = grid1;
-            chartFont5.FontName = "Arial";
-            tick1.Font = chartFont5;
-            this.gunaChart1.XAxes.Ticks = tick1;
-            this.gunaChart1.YAxes.GridLines = grid2;
-            chartFont6.FontName = "Arial";
-            tick2.Font = chartFont6;
-            this.gunaChart1.YAxes.Ticks = tick2;
-            this.gunaChart1.ZAxes.GridLines = grid3;
-            chartFont7.FontName = "Arial";
-            pointLabel1.Font = chartFont7;
-            this.gunaChart1.ZAxes.PointLabels = pointLabel1;
-            chartFont8.FontName = "Arial";
-            tick3.Font = chartFont8;
-            this.gunaChart1.ZAxes.Ticks = tick3;
-            // 
-            // gunaLineDataset1
-            // 
-            this.gunaLineDataset1.BorderColor = System.Drawing.Color.Empty;
-            lPoint1.Label = "March";
-            lPoint1.Y = 1D;
-            lPoint2.Label = "April";
-            lPoint2.Y = 8D;
-            lPoint3.Label = "May";
-            lPoint3.Y = 10D;
-            lPoint4.Label = "6";
-            lPoint4.Y = 0D;
-            lPoint5.Label = "4";
-            lPoint5.Y = 0D;
-            lPoint6.Label = "8";
-            lPoint6.Y = 0D;
-            lPoint7.Label = "6";
-            lPoint7.Y = 0D;
-            lPoint8.Label = "1";
-            lPoint8.Y = 0D;
-            this.gunaLineDataset1.DataPoints.AddRange(new Guna.Charts.WinForms.LPoint[] {
-            lPoint1,
-            lPoint2,
-            lPoint3,
-            lPoint4,
-            lPoint5,
-            lPoint6,
-            lPoint7,
-            lPoint8});
-            this.gunaLineDataset1.FillColor = System.Drawing.Color.Empty;
-            this.gunaLineDataset1.Label = "Revenue";
-            this.gunaLineDataset1.TargetChart = this.gunaChart1;
+            this.label11.Text = "Total Revenue";
             // 
             // period_combobx
             // 
@@ -313,70 +238,52 @@
             this.period_combobx.Items.AddRange(new object[] {
             "This Month",
             "This Year"});
-            this.period_combobx.Location = new System.Drawing.Point(455, 15);
+            this.period_combobx.Location = new System.Drawing.Point(961, 31);
             this.period_combobx.Name = "period_combobx";
             this.period_combobx.Size = new System.Drawing.Size(166, 36);
             this.period_combobx.TabIndex = 5;
+            this.period_combobx.SelectedIndexChanged += new System.EventHandler(this.period_combobx_SelectedIndexChanged);
             // 
             // guna2Panel8
             // 
             this.guna2Panel8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
             this.guna2Panel8.BorderThickness = 2;
-            this.guna2Panel8.Controls.Add(this.gunaChart2);
+            this.guna2Panel8.Controls.Add(this.productChart);
             this.guna2Panel8.Controls.Add(this.label12);
             this.guna2Panel8.Location = new System.Drawing.Point(713, 231);
             this.guna2Panel8.Name = "guna2Panel8";
             this.guna2Panel8.Size = new System.Drawing.Size(414, 434);
             this.guna2Panel8.TabIndex = 8;
             // 
-            // gunaChart2
+            // productChart
             // 
-            this.gunaChart2.BackColor = System.Drawing.Color.White;
-            this.gunaChart2.Datasets.AddRange(new Guna.Charts.Interfaces.IGunaDataset[] {
-            this.gunaPieDataset1});
-            chartFont9.FontName = "Arial";
-            this.gunaChart2.Legend.LabelFont = chartFont9;
-            this.gunaChart2.Location = new System.Drawing.Point(20, 67);
-            this.gunaChart2.Name = "gunaChart2";
-            this.gunaChart2.Size = new System.Drawing.Size(368, 352);
-            this.gunaChart2.TabIndex = 9;
-            chartFont10.FontName = "Arial";
-            chartFont10.Size = 12;
-            chartFont10.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            this.gunaChart2.Title.Font = chartFont10;
-            chartFont11.FontName = "Arial";
-            this.gunaChart2.Tooltips.BodyFont = chartFont11;
-            chartFont12.FontName = "Arial";
-            chartFont12.Size = 9;
-            chartFont12.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            this.gunaChart2.Tooltips.TitleFont = chartFont12;
-            this.gunaChart2.XAxes.GridLines = grid4;
-            chartFont13.FontName = "Arial";
-            tick4.Font = chartFont13;
-            this.gunaChart2.XAxes.Ticks = tick4;
-            this.gunaChart2.YAxes.GridLines = grid5;
-            chartFont14.FontName = "Arial";
-            tick5.Font = chartFont14;
-            this.gunaChart2.YAxes.Ticks = tick5;
-            this.gunaChart2.ZAxes.GridLines = grid6;
-            chartFont15.FontName = "Arial";
-            pointLabel2.Font = chartFont15;
-            this.gunaChart2.ZAxes.PointLabels = pointLabel2;
-            chartFont16.FontName = "Arial";
-            tick6.Font = chartFont16;
-            this.gunaChart2.ZAxes.Ticks = tick6;
-            // 
-            // gunaPieDataset1
-            // 
-            lPoint9.Label = "Coffee";
-            lPoint9.Y = 45D;
-            lPoint10.Label = "Tea";
-            lPoint10.Y = 30D;
-            this.gunaPieDataset1.DataPoints.AddRange(new Guna.Charts.WinForms.LPoint[] {
-            lPoint9,
-            lPoint10});
-            this.gunaPieDataset1.Label = "Pie1";
-            this.gunaPieDataset1.TargetChart = this.gunaChart2;
+            this.productChart.BackColor = System.Drawing.SystemColors.Control;
+            this.productChart.BorderlineColor = System.Drawing.SystemColors.Control;
+            chartArea2.AxisX.LabelStyle.Enabled = false;
+            chartArea2.AxisX.LineColor = System.Drawing.Color.White;
+            chartArea2.BackColor = System.Drawing.SystemColors.Control;
+            chartArea2.Name = "ChartArea1";
+            this.productChart.ChartAreas.Add(chartArea2);
+            legend2.BackColor = System.Drawing.SystemColors.Control;
+            legend2.Enabled = false;
+            legend2.Name = "Legend1";
+            this.productChart.Legends.Add(legend2);
+            this.productChart.Location = new System.Drawing.Point(3, 43);
+            this.productChart.Name = "productChart";
+            series2.BorderColor = System.Drawing.SystemColors.Control;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series2.Color = System.Drawing.Color.White;
+            series2.IsVisibleInLegend = false;
+            series2.IsXValueIndexed = true;
+            series2.LabelForeColor = System.Drawing.Color.Transparent;
+            series2.Legend = "Legend1";
+            series2.Name = "prod_sales";
+            series2.ToolTip = "#LABEL";
+            this.productChart.Series.Add(series2);
+            this.productChart.Size = new System.Drawing.Size(405, 370);
+            this.productChart.TabIndex = 14;
+            this.productChart.GetToolTipText += new System.EventHandler<System.Windows.Forms.DataVisualization.Charting.ToolTipEventArgs>(this.productChart_GetToolTipText);
             // 
             // label12
             // 
@@ -394,12 +301,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.guna2Panel8);
             this.Controls.Add(this.guna2Panel7);
+            this.Controls.Add(this.period_combobx);
             this.Controls.Add(this.guna2Panel6);
             this.Controls.Add(this.guna2Panel5);
             this.Controls.Add(this.guna2Panel4);
             this.Controls.Add(this.label4);
             this.Name = "Dash_Overview";
             this.Size = new System.Drawing.Size(1171, 687);
+            this.Load += new System.EventHandler(this.Dash_Overview_Load);
             this.guna2Panel4.ResumeLayout(false);
             this.guna2Panel4.PerformLayout();
             this.guna2Panel5.ResumeLayout(false);
@@ -408,8 +317,10 @@
             this.guna2Panel6.PerformLayout();
             this.guna2Panel7.ResumeLayout(false);
             this.guna2Panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.revenueChart)).EndInit();
             this.guna2Panel8.ResumeLayout(false);
             this.guna2Panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productChart)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -419,22 +330,20 @@
 
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label noOrderVal;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label totExpVal;
         private System.Windows.Forms.Label label8;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label netRevVal;
         private System.Windows.Forms.Label label10;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel7;
         private System.Windows.Forms.Label label11;
-        private Guna.Charts.WinForms.GunaChart gunaChart1;
         private Guna.UI2.WinForms.Guna2ComboBox period_combobx;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel8;
-        private Guna.Charts.WinForms.GunaChart gunaChart2;
         private System.Windows.Forms.Label label12;
-        private Guna.Charts.WinForms.GunaPieDataset gunaPieDataset1;
-        private Guna.Charts.WinForms.GunaLineDataset gunaLineDataset1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart productChart;
+        private System.Windows.Forms.DataVisualization.Charting.Chart revenueChart;
     }
 }

@@ -17,19 +17,11 @@ namespace Starbucks
         bool home_dynamicIsland_active = false;
         public Guna2Panel home_dynamic_island;
         Dynamic_island dynamic_island = new Dynamic_island();
-
+        data datas = new data();
         public screen_home()
         {
             InitializeComponent();
             sc_home_instance = this;
-            home_dynamic_island = home_dynamicIsland;
-            home_dynamic_island.Size = new Size(200, 50);
-            home_dynamic_island.Location = new Point((ClientSize.Width / 2) - (home_dynamic_island.Width / 2),6);
-            foreach(Guna2Panel categoryTile in home_dynamicIsland.Controls)
-            {
-                categoryTile.Visible = false;
-            }
-            mouseClick();
         }
 
         void mouseClick()
@@ -147,6 +139,18 @@ namespace Starbucks
             Hide();
         }
 
-        
+        private void screen_home_Load(object sender, EventArgs e)
+        {
+            home_dynamic_island = home_dynamicIsland;
+            home_dynamic_island.Size = new Size(200, 50);
+            home_dynamic_island.Location = new Point((ClientSize.Width / 2) - (home_dynamic_island.Width / 2), 6);
+            foreach (Guna2Panel categoryTile in home_dynamicIsland.Controls)
+            {
+                categoryTile.Visible = false;
+            }
+            mouseClick();
+            data.totalPrice = 0;
+            datas.clearData();
+        }
     }
 }

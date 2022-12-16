@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.countLabel = new System.Windows.Forms.Label();
             this.flavour_label = new System.Windows.Forms.Label();
             this.size_label = new System.Windows.Forms.Label();
             this.prod_name = new System.Windows.Forms.Label();
@@ -38,14 +39,26 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BorderRadius = 20;
+            this.guna2Panel1.Controls.Add(this.countLabel);
             this.guna2Panel1.Controls.Add(this.flavour_label);
             this.guna2Panel1.Controls.Add(this.size_label);
             this.guna2Panel1.Controls.Add(this.prod_name);
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
             this.guna2Panel1.Location = new System.Drawing.Point(3, 3);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(894, 144);
+            this.guna2Panel1.Size = new System.Drawing.Size(852, 144);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // countLabel
+            // 
+            this.countLabel.AutoSize = true;
+            this.countLabel.Font = new System.Drawing.Font("Baskerville Old Face", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.countLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.countLabel.Location = new System.Drawing.Point(742, 54);
+            this.countLabel.Name = "countLabel";
+            this.countLabel.Size = new System.Drawing.Size(89, 45);
+            this.countLabel.TabIndex = 6;
+            this.countLabel.Text = "( 1 )";
             // 
             // flavour_label
             // 
@@ -87,7 +100,7 @@
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.guna2Panel1);
             this.Name = "Final_Products";
-            this.Size = new System.Drawing.Size(900, 150);
+            this.Size = new System.Drawing.Size(864, 150);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -100,5 +113,6 @@
         private System.Windows.Forms.Label flavour_label;
         private System.Windows.Forms.Label size_label;
         private System.Windows.Forms.Label prod_name;
+        private System.Windows.Forms.Label countLabel;
     }
 }

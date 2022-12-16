@@ -51,6 +51,7 @@ namespace Starbucks.infrastructure.components
             set
             {
                 _expMonth = value;
+                monthLabel.Text = $"( {_expMonth} )";
             }
         }
 
@@ -77,6 +78,7 @@ namespace Starbucks.infrastructure.components
             {
                 expTypeLabel.Visible = false;
                 expAmountLabel.Visible = false;
+                monthLabel.Visible = false;
                 expTypeTxt.Visible = true;
                 expAmtTxt.Visible = true;
                 editBtn.Image = Starbucks.Properties.Resources.tick_logo;
@@ -89,6 +91,7 @@ namespace Starbucks.infrastructure.components
                 {
                     expTypeLabel.Visible = true;
                     expAmountLabel.Visible = true;
+                    monthLabel.Visible = true;
                     expTypeTxt.Visible = false;
                     expAmtTxt.Visible = false;
                     expTypeLabel.Text = expTypeTxt.Text;

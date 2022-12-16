@@ -21,6 +21,7 @@ namespace Starbucks.infrastructure.components
         private string _prodName;
         private string _prodSize;
         private string _prodFlavour;
+        private string _prodcount;
 
         public string Name
         {
@@ -46,6 +47,15 @@ namespace Starbucks.infrastructure.components
             set
             {
                 flavour_label.Text = value;
+            }
+        }
+
+        public string Count
+        {
+            get { return _prodcount; }
+            set
+            {
+                countLabel.Text = $"( {value} )";
             }
         }
 

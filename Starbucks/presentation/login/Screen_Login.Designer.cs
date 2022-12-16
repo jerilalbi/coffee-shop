@@ -212,7 +212,7 @@
             this.admin_user_txtBox.Name = "admin_user_txtBox";
             this.admin_user_txtBox.PasswordChar = '\0';
             this.admin_user_txtBox.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.admin_user_txtBox.PlaceholderText = "USERNAME";
+            this.admin_user_txtBox.PlaceholderText = "EMAIL";
             this.admin_user_txtBox.SelectedText = "";
             this.admin_user_txtBox.Size = new System.Drawing.Size(392, 55);
             this.admin_user_txtBox.TabIndex = 8;

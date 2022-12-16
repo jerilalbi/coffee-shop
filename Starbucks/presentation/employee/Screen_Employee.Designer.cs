@@ -70,6 +70,7 @@
             this.productsDisplay.AutoScroll = true;
             this.productsDisplay.Location = new System.Drawing.Point(107, 115);
             this.productsDisplay.Name = "productsDisplay";
+            this.productsDisplay.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
             this.productsDisplay.Size = new System.Drawing.Size(922, 423);
             this.productsDisplay.TabIndex = 2;
             this.productsDisplay.Visible = false;
@@ -81,6 +82,7 @@
             // 
             // nextBtn
             // 
+            this.nextBtn.BorderRadius = 20;
             this.nextBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.nextBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.nextBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -88,7 +90,7 @@
             this.nextBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
             this.nextBtn.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nextBtn.ForeColor = System.Drawing.Color.White;
-            this.nextBtn.Location = new System.Drawing.Point(874, 568);
+            this.nextBtn.Location = new System.Drawing.Point(1100, 568);
             this.nextBtn.Name = "nextBtn";
             this.nextBtn.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
             this.nextBtn.Size = new System.Drawing.Size(155, 60);

@@ -452,6 +452,7 @@
             this.Name = "screen_home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.screen_home_Load);
             this.home_dynamicIsland.ResumeLayout(false);
             this.home_dynamicIsland.PerformLayout();
             this.h_coffee_category_tile.ResumeLayout(false);

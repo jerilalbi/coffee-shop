@@ -50,12 +50,9 @@ namespace Starbucks.application.events
                 message.From = new MailAddress(fromMail);
                 message.Subject = "Starbucks";
                 message.To.Add(new MailAddress(data.emailId));
-               // message.To.Add(new MailAddress("devjerilalbi@gmail.com"));
+               //message.To.Add(new MailAddress("devjerilalbi@gmail.com"));
 
                 message.Body = emailData;
-               /* message.Body = String.Format(
-            "<h3>Client:  StarBucks Bill</h3>" +
-            @"<img height=""200"" width=""200"" src=""cid:{0}"" />", attachment.ContentId); */
                 message.IsBodyHtml = true; 
                 message.Attachments.Add(attachment);
 

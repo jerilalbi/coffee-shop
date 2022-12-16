@@ -35,6 +35,7 @@
             this.deleteBtn = new Guna.UI2.WinForms.Guna2ImageButton();
             this.expAmountLabel = new System.Windows.Forms.Label();
             this.expTypeLabel = new System.Windows.Forms.Label();
+            this.monthLabel = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,6 +44,7 @@
             this.guna2Panel1.BorderRadius = 20;
             this.guna2Panel1.Controls.Add(this.expAmtTxt);
             this.guna2Panel1.Controls.Add(this.expTypeTxt);
+            this.guna2Panel1.Controls.Add(this.monthLabel);
             this.guna2Panel1.Controls.Add(this.editBtn);
             this.guna2Panel1.Controls.Add(this.deleteBtn);
             this.guna2Panel1.Controls.Add(this.expAmountLabel);
@@ -66,7 +68,7 @@
             this.expAmtTxt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.expAmtTxt.ForeColor = System.Drawing.Color.White;
             this.expAmtTxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.expAmtTxt.Location = new System.Drawing.Point(34, 72);
+            this.expAmtTxt.Location = new System.Drawing.Point(34, 67);
             this.expAmtTxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.expAmtTxt.Name = "expAmtTxt";
             this.expAmtTxt.PasswordChar = '\0';
@@ -90,7 +92,7 @@
             this.expTypeTxt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.expTypeTxt.ForeColor = System.Drawing.Color.White;
             this.expTypeTxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.expTypeTxt.Location = new System.Drawing.Point(34, 30);
+            this.expTypeTxt.Location = new System.Drawing.Point(34, 26);
             this.expTypeTxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.expTypeTxt.Name = "expTypeTxt";
             this.expTypeTxt.PasswordChar = '\0';
@@ -155,6 +157,17 @@
             this.expTypeLabel.TabIndex = 2;
             this.expTypeLabel.Text = "Rent";
             // 
+            // monthLabel
+            // 
+            this.monthLabel.AutoSize = true;
+            this.monthLabel.Font = new System.Drawing.Font("Baskerville Old Face", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monthLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.monthLabel.Location = new System.Drawing.Point(154, 65);
+            this.monthLabel.Name = "monthLabel";
+            this.monthLabel.Size = new System.Drawing.Size(48, 38);
+            this.monthLabel.TabIndex = 8;
+            this.monthLabel.Text = "( )";
+            // 
             // Expense_Tile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -178,5 +191,6 @@
         private Guna.UI2.WinForms.Guna2ImageButton deleteBtn;
         private Guna.UI2.WinForms.Guna2TextBox expTypeTxt;
         private Guna.UI2.WinForms.Guna2TextBox expAmtTxt;
+        private System.Windows.Forms.Label monthLabel;
     }
 }

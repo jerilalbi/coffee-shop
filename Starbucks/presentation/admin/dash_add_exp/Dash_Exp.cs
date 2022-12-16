@@ -1,4 +1,5 @@
-﻿using Starbucks.domain.admin;
+﻿using Starbucks.domain;
+using Starbucks.domain.admin;
 using Starbucks.infrastructure.components;
 using Starbucks.presentation.admin.dashboard;
 using System;
@@ -11,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Starbucks.presentation.admin.dash_add_exp
 {
@@ -41,28 +43,28 @@ namespace Starbucks.presentation.admin.dash_add_exp
 
       internal  void fetchAlldata()
         {
-            expTypeChartData.DataPoints.Clear();
+            exp_chart.Series["expenses"].Points.Clear();
             AdminDbOP dbOP = new AdminDbOP();
             SqlDataReader noExp = (period == "month") ? dbOP.adminDataFetchQuery($"select count(*) as noExp from expense where month = {month}") : dbOP.adminDataFetchQuery($"select count(*) as noExp from expense where year = {year}");
             if (noExp.Read())
             {
                 noExpVal.Text = noExp["noExp"].ToString();
-                noExp.Close();
             }
+            noExp.Close();
 
-            SqlDataReader highExp = (period == "month") ? dbOP.adminDataFetchQuery($"select type from expense where amount = (select max(amount) from expense) and month = {month}") : dbOP.adminDataFetchQuery($"select type from expense where amount = (select max(amount) from expense) and year = {year}");
+            SqlDataReader highExp = (period == "month") ? dbOP.adminDataFetchQuery($"select type from expense where amount = (select max(amount) from expense where month = {month})") : dbOP.adminDataFetchQuery($"select type from expense where amount = (select max(amount) from expense where year = {year})");
             if (highExp.Read())
             {
                 highExpVal.Text = highExp["type"].ToString();
-                highExp.Close();
             }
+            highExp.Close();
 
             SqlDataReader totalExp = (period == "month") ? dbOP.adminDataFetchQuery($"select sum(amount) as totalExp from expense where month = {month}") : dbOP.adminDataFetchQuery($"select sum(amount) as totalExp from expense where year = {year}");
             if (totalExp.Read())
             {
                 totalExpVal.Text = totalExp["totalExp"].ToString();
-                totalExp.Close();
             }
+            totalExp.Close();
 
             SqlDataReader expenses = (period == "month") ? dbOP.adminDataFetchQuery($"select * from expense where month = {month}") : dbOP.adminDataFetchQuery($"select * from expense where year = {year}");
             expDisplayPanel.Controls.Clear();
@@ -79,7 +81,7 @@ namespace Starbucks.presentation.admin.dash_add_exp
                     TileName = $"tile{count}",
                 });
 
-                expTypeChartData.DataPoints.Add(expenses["type"].ToString(), int.Parse(expenses["amount"].ToString()));
+                exp_chart.Series["expenses"].Points.AddXY(expenses["type"].ToString(), int.Parse(expenses["amount"].ToString()));
                 count++;
             }
             expenses.Close();
@@ -92,6 +94,17 @@ namespace Starbucks.presentation.admin.dash_add_exp
             ad_Exp.BringToFront();
             Screen_Dashboard.sc_dash.base_dashboard.Controls.Add(ad_Exp);
             this.Dispose();
+        }
+
+        private void exp_chart_GetToolTipText(object sender, ToolTipEventArgs e)
+        {
+            switch (e.HitTestResult.ChartElementType)
+            {
+                case ChartElementType.DataPoint:
+                    var dataPoint = e.HitTestResult.Series.Points[e.HitTestResult.PointIndex];
+                    e.Text = string.Format("{0} ( ₹ {1} )", dataPoint.AxisLabel, dataPoint.YValues[0]);
+                    break;
+            }
         }
 
         private void period_combobx_SelectedIndexChanged(object sender, EventArgs e)

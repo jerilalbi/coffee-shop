@@ -5,6 +5,7 @@ using Starbucks.application.events;
 using Starbucks.domain.admin;
 using Starbucks.presentation.final;
 using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Imaging;
@@ -19,7 +20,7 @@ namespace Starbucks.presentation.payment
     public partial class Screen_Payment : Form
     {
         int total;
-        int amount = 1;
+        int amount = 1,orderID;
         JObject productJSON;
         string prodJsonString = 
             @"
@@ -97,19 +98,23 @@ namespace Starbucks.presentation.payment
         void addSales()
         {
             Sales sales = new Sales();
+            AdminDbOP dbOP = new AdminDbOP();
+             orderID = makeOderID();
             foreach(var items in productJSON["products"])
             {
                 sales.addSales(items["name"].ToString(), int.Parse(items["price"].ToString()), int.Parse(items["count"].ToString()), items["category"].ToString());
+                dbOP.adminQuery($"insert into orders values({orderID},'{items["name"]}',{int.Parse(items["price"].ToString())},{int.Parse(items["count"].ToString())},'{items["size"]}','{items["flavour"]}')");
             }
+
         }
 
         private void guna2TileButton1_Click(object sender, EventArgs e)
         {
             getData();
-            makeQrCode(prodJsonString, true);
+            addSales();
+            makeQrCode(orderID.ToString(), true);
             Email email = new Email();
             email.send(emailData);
-           addSales();
             Screen_final finalScreen = new Screen_final();
             finalScreen.Show();
             Hide();
@@ -136,6 +141,25 @@ namespace Starbucks.presentation.payment
                 qrcode.Save("J:\\coding\\.net\\Starbucks\\Starbucks\\presentation\\images\\qrcode.png");
             }
             return qrcode;
+        }
+
+        int makeOderID() 
+        {
+            List<int> oderIds = new List<int>();
+            Random random = new Random();
+            int oderID = random.Next(1000,9999);
+            AdminDbOP adminDbOP = new AdminDbOP();
+            SqlDataReader readerID = adminDbOP.adminDataFetchQuery("select order_id from orders");
+            while (readerID.Read())
+            {
+                oderIds.Add(int.Parse(readerID["order_id"].ToString()));
+            }
+            do
+            {
+                oderID = random.Next(1000, 9999);
+            }while(oderIds.Contains(oderID));
+            readerID.Close();
+            return oderID; 
         }
     }
 }
