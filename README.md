@@ -31,7 +31,6 @@ This is a .NET desktop application designed to facilitate product ordering in ca
 6. Import the database from the database folder into the new database
 
 ## Screenshots
-Include screenshots of the application to showcase its features.
 
 ### Admin/Customer Selection Page
 ![startbucks2](https://github.com/user-attachments/assets/3775d0ae-0555-4d3d-b201-5ad219986d66)
